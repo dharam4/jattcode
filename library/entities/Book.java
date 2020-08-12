@@ -5,21 +5,31 @@ import java.io.Serializable;
 @SuppressWarnings("serial")
 public class Book implements Serializable {
 	
-	private String tItLe;
-	private String AuThOr;
-	private String CALLNO;
-	private int iD;
+	//private String tItLe;
+	private String title;
+	//private String AuThOr;
+	private String author;
+	//private String CALLNO;
+	private String callNo;
+	//private int iD;
+	private int id;
 	
-	private enum sTaTe { AVAILABLE, ON_LOAN, DAMAGED, RESERVED };
-	private sTaTe StAtE;
-	
+	//private enum sTaTe { AVAILABLE, ON_LOAN, DAMAGED, RESERVED };
+	private enum State { AVAILABLE, ON_LOAN, DAMAGED, RESERVED };
+	//private sTaTe StAtE;
+	private State state ;
 	
 	public Book(String author, String title, String callNo, int id) {
-		this.AuThOr = author;
-		this.tItLe = title;
-		this.CALLNO = callNo;
-		this.iD = id;
-		this.StAtE = sTaTe.AVAILABLE;
+		//this.AuThOr = author;
+		this.author = author;
+		//this.tItLe = title;
+		this.title = title;
+		//this.CALLNO = callNo;
+		this.callNo = callNo;
+		//this.iD = id;
+		this.id = id;
+		//this.StAtE = sTaTe.AVAILABLE;
+		this.state = State.AVAILABLE;
 	}
 	
 	public String toString() {
