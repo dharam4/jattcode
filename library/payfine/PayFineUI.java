@@ -1,27 +1,27 @@
-package library.payfine;
+package library.payfine;                               
 import java.util.Scanner;
 
 
 public class PayFineUI {
 
 
-	public static enum uI_sTaTe { INITIALISED, READY, PAYING, COMPLETED, CANCELLED };
+	public static enum UiState                     //uI_sTaTe { INITIALISED, READY, PAYING, COMPLETED, CANCELLED };
 
-	private pAY_fINE_cONTROL CoNtRoL;
+	private PayFineControl control;                //pAY_fINE_cONTROL CoNtRoL
 	private Scanner input;
-	private uI_sTaTe StAtE;
+	private UiState state;                         //uI_sTaTe StAtE
 
 	
-	public PayFineUI(pAY_fINE_cONTROL control) {
-		this.CoNtRoL = control;
+	public PayFineUi(PayFineControl control)       //PayFineUI(pAY_fINE_cONTROL control){
+		this.control = control;                //CoNtRoL
 		input = new Scanner(System.in);
-		StAtE = uI_sTaTe.INITIALISED;
-		control.SeT_uI(this);
+		state = UiState.INITIALISED;           //StAtE=uI_sTaTe.INITIALISED
+		control.setUi(this);                  //control.SeT_uI(this);
 	}
 	
 	
-	public void SeT_StAtE(uI_sTaTe state) {
-		this.StAtE = state;
+	public void setState(UiState state)           //SeT_StAtE(uI_sTaTe state){
+		this.state = state;                   //this.StAtE = state;
 	}
 
 
