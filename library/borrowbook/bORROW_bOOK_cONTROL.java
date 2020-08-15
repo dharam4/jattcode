@@ -10,7 +10,8 @@ import library.entities.Library;
 import library.entities.Loan;
 import library.entities.Member;
 
-public class BorrowBookControl 		//bORROW_bOOK_cONTROL {
+public class BorrowBookControl 
+	 //public class bORROW_bOOK_cONTROL {
 	
 	private BorrowBookUI ui;   	//uI;
 	
