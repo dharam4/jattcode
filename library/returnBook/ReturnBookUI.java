@@ -33,18 +33,22 @@ public class ReturnBookUI {
 	}
 
 
-	public void RuN() {		
-		oUtPuT("Return Book Use Case UI\n");
+	//public void RuN() {
+        public void Run() {
+		//oUtPuT("Return Book Use Case UI\n");
+		output("Returnbook use case ui\n")
 		
 		while (true) {
 			
-			switch (StATe) {
+			//switch (StATe) {
+			switch (state) {
 			
 			case INITIALISED:
 				break;
 				
 			case READY:
-				String BoOk_InPuT_StRiNg = iNpUt("Scan Book (<enter> completes): ");
+				//String BoOk_InPuT_StRiNg = iNpUt("Scan Book (<enter> completes): ");
+				String Bookinputstring = input("Scan book (<enter> completes): ");
 				if (BoOk_InPuT_StRiNg.length() == 0) 
 					CoNtRoL.sCaNnInG_cOmPlEtE();
 				
