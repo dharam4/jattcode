@@ -12,8 +12,8 @@ import library.entities.Member;
 
 public class BorrowBookControl 
 	 //public class bORROW_bOOK_cONTROL {
-	
-	private BorrowBookUI ui;   	//uI;
+	//private BorrowBookUI uI;     
+	private BorrowBookUI ui;   	//uI changed to ui
 	
 	private Library library;   	//lIbRaRy;
 	private Member member;     	//mEmBeR;
