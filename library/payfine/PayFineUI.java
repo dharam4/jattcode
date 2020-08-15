@@ -1,4 +1,4 @@
-package library.PayFine;                               //payfine
+package library.payfine;                               
 import java.util.Scanner;
 
 
@@ -12,10 +12,10 @@ public class PayFineUI {
 	private UiState state;                         //uI_sTaTe StAtE
 
 	
-	public PayFineUI(PayFineControl control)       //pAY_fINE_cONTROL control{
+	public PayFineUi(PayFineControl control)       //PayFineUI(pAY_fINE_cONTROL control){
 		this.control = control;                //CoNtRoL
 		input = new Scanner(System.in);
-		StAtE = UiState.INITIALISED;           //uI_sTaTe.INITIALISED
+		state = UiState.INITIALISED;           //StAtE=uI_sTaTe.INITIALISED
 		control.setUi(this);                  //control.SeT_uI(this);
 	}
 	
