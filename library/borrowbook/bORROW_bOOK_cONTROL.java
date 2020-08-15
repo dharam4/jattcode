@@ -1,4 +1,7 @@
-package library.borrowbook;
+//Author : Ankush Kumar
+//Reviewer : Navjeevan Kaur
+//Mediator : Dharamveer Singh
+package library.BorrowBook;		//borrowbook;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,16 +10,18 @@ import library.entities.Library;
 import library.entities.Loan;
 import library.entities.Member;
 
-public class bORROW_bOOK_cONTROL {
+public class BorrowBookControl 
+	 //public class bORROW_bOOK_cONTROL {
 	
-	private BorrowBookUI uI;
+	private BorrowBookUI ui;   	//uI;
 	
-	private Library lIbRaRy;
-	private Member mEmBeR;
-	private enum CONTROL_STATE { INITIALISED, READY, RESTRICTED, SCANNING, IDENTIFIED, FINALISING, COMPLETED, CANCELLED };
-	private CONTROL_STATE sTaTe;
+	private Library library;   	//lIbRaRy;
+	private Member member;     	//mEmBeR;
+	private enum ControlState;  	//CONTROL_STATE { INITIALISED, READY, RESTRICTED, SCANNING, IDENTIFIED, FINALISING, COMPLETED, CANCELLED };
+	private ControlState state;    	//CONTROL_STATE sTaTe;
 	
-	private List<Book> pEnDiNg_LiSt;
+	//private List<Book> pEnDiNg_LiSt; 
+	private List<Book> pendingList;    //private List<Book> pEnDiNg_List changed to private List<Book> pendingList
 	private List<Loan> cOmPlEtEd_LiSt;
 	private Book bOoK;
 	
