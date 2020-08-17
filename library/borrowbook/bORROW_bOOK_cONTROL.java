@@ -27,7 +27,8 @@ public class BorrowBookControl
 	//private Book bOoK;
 	private Book book;			//bOok changed to book
 	
-	public bORROW_bOOK_cONTROL() {
+	//public bORROW_bOOK_cONTROL() 
+	public borrowBookControl(){		//bORROW_bOOK_cONTROL() changed to borrowBookControl
 		this.lIbRaRy = Library.GeTiNsTaNcE();
 		sTaTe = CONTROL_STATE.INITIALISED;
 	}
