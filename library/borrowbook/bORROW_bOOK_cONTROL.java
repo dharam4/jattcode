@@ -22,7 +22,8 @@ public class BorrowBookControl
 	
 	//private List<Book> pEnDiNg_LiSt; 
 	private List<Book> pendingList;    //private List<Book> pEnDiNg_List changed to private List<Book> pendingList
-	private List<Loan> cOmPlEtEd_LiSt;
+	//private List<Loan> cOmPlEtEd_LiSt;
+	private List<Loan> completedList; 	// cOmPlEtEd_LiSt changed to  completedList
 	private Book bOoK;
 	
 	
