@@ -65,12 +65,12 @@ public class Book implements Serializable {
 	//public boolean iS_AvAiLaBlE() {
 	public boolean isAvailable() { // iS_AvAiLaBlE changed into isAvailable -  Author
 		//-return StAtE == sTaTe.AVAILABLE;
-		return state == State.AVAILABLE;
+		return state == State.AVAILABLE;  // sTaTe changed into State -  Author
 	}
 
 	
 	public boolean iS_On_LoAn() {
-		return StAtE == sTaTe.ON_LOAN;
+		return StAtE == sTaTe.ON_LOAN; 
 	}
 
 	
