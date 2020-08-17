@@ -1,3 +1,8 @@
+// Author - Dharamveer singh
+// Mediator- Ankush kumar
+// reviewer - Dipanshu kumar
+
+
 package library.entities;
 import java.io.Serializable;
 
@@ -6,30 +11,30 @@ import java.io.Serializable;
 public class Book implements Serializable {
 	
 	//private String tItLe;
-	private String title;
+	private String title; // tItLe changed into title-  Author
 	//private String AuThOr;
-	private String author;
+	private String author; // AuThOr changed into author -  Author
 	//private String CALLNO;
-	private String callNo;
-	//private int iD;
-	private int id;
+	private String callNo; // CALLNO changed into callNo -  Author
+	//private int iD;  
+	private int id;  // iD changed into id -  Author
 	
 	//private enum sTaTe { AVAILABLE, ON_LOAN, DAMAGED, RESERVED };
-	private enum State { AVAILABLE, ON_LOAN, DAMAGED, RESERVED };
+	private enum State { AVAILABLE, ON_LOAN, DAMAGED, RESERVED }; // sTaTe changed into State -  Author 
 	//private sTaTe StAtE;
-	private State state ;
+	private State state ;  // sTaTe and StAtE changed into State state -  Author
 	
 	public Book(String author, String title, String callNo, int id) {
 		//this.AuThOr = author;
-		this.author = author;
+		this.author = author; //AuThOr changed into author -  Author
 		//this.tItLe = title;
-		this.title = title;
+		this.title = title; // tItLe changed into title -  Author
 		//this.CALLNO = callNo;
-		this.callNo = callNo;
+		this.callNo = callNo; // CALLNO changed into callNo -  Author
 		//this.iD = id;
-		this.id = id;
+		this.id = id; // iD changed into id
 		//this.StAtE = sTaTe.AVAILABLE;
-		this.state = State.AVAILABLE;
+		this.state = State.AVAILABLE;// sTaTe changed into State -  Author
 	}
 	
 	public String toString() {
@@ -43,18 +48,24 @@ public class Book implements Serializable {
 		return sb.toString();
 	}
 
-	public Integer gEtId() {
-		return iD;
+	//public Integer gEtId() {
+	public Integer getId() { //gEtId  changed into getId 
+		//return iD;
+		return id; // iD  changed into id
 	}
 
-	public String gEtTiTlE() {
-		return tItLe;
+	//public String gEtTiTlE() {
+	public String getTitle() { // gEtTiTlE changed into getTitle
+		//return tItLe;
+		return title; // tItLe changed into title
 	}
 
 
 	
-	public boolean iS_AvAiLaBlE() {
-		return StAtE == sTaTe.AVAILABLE;
+	//public boolean iS_AvAiLaBlE() {
+	public boolean isAvailable() { // iS_AvAiLaBlE changed into isAvailable
+		//-return StAtE == sTaTe.AVAILABLE;
+		return state == State.AVAILABLE;
 	}
 
 	
