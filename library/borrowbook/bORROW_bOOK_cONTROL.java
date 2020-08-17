@@ -36,8 +36,10 @@ public class BorrowBookControl
 	}
 	
 
-	public void SeT_Ui(BorrowBookUI Ui) {
-		if (!sTaTe.equals(CONTROL_STATE.INITIALISED)) 
+	//public void SeT_Ui(BorrowBookUI Ui)
+	public void setUi(BorrowBookUi ui){		//public void SeT_Ui(BorrowBookUI Ui) changed to public void setUi(BorrowBookUi ui)
+		//if (!sTaTe.equals(CONTROL_STATE.INITIALISED)) 
+		if (!state.equals(ControlState.INITIALISED)) 	//if (!sTaTe.equals(CONTROL_STATE.INITIALISED)) changed to if (!state.equals(ControlState.INITIALISED)) 
 			throw new RuntimeException("BorrowBookControl: cannot call setUI except in INITIALISED state");
 			
 		this.uI = Ui;
