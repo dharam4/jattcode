@@ -49,21 +49,21 @@ public class Book implements Serializable {
 	}
 
 	//public Integer gEtId() {
-	public Integer getId() { //gEtId  changed into getId 
+	public Integer getId() { //gEtId  changed into getId -  Author
 		//return iD;
-		return id; // iD  changed into id
+		return id; // iD  changed into id -  Author
 	}
 
 	//public String gEtTiTlE() {
-	public String getTitle() { // gEtTiTlE changed into getTitle
+	public String getTitle() { // gEtTiTlE changed into getTitle-  Author
 		//return tItLe;
-		return title; // tItLe changed into title
+		return title; // tItLe changed into title-  Author
 	}
 
 
 	
 	//public boolean iS_AvAiLaBlE() {
-	public boolean isAvailable() { // iS_AvAiLaBlE changed into isAvailable
+	public boolean isAvailable() { // iS_AvAiLaBlE changed into isAvailable -  Author
 		//-return StAtE == sTaTe.AVAILABLE;
 		return state == State.AVAILABLE;
 	}
