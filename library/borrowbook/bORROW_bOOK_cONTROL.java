@@ -31,7 +31,8 @@ public class BorrowBookControl
 	public borrowBookControl(){		//bORROW_bOOK_cONTROL() changed to borrowBookControl
 		//this.lIbRaRy = Library.GeTiNsTaNcE();
 		this.Library = Library.getInstance();  	//this.lIbRaRy = Library.GeTiNsTaNcE(); changed to this.Library = Library.getInstance();
-		sTaTe = CONTROL_STATE.INITIALISED;
+		//sTaTe = CONTROL_STATE.INITIALISED;
+		state = =ControlState.INITIALISED;	//sTaTe = CONTROL_STATE.INITIALISED; changed to state = =ControlState.INITIALISED;
 	}
 	
 
