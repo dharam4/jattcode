@@ -24,8 +24,8 @@ public class BorrowBookControl
 	private List<Book> pendingList;    //private List<Book> pEnDiNg_List changed to private List<Book> pendingList
 	//private List<Loan> cOmPlEtEd_LiSt;
 	private List<Loan> completedList; 	// cOmPlEtEd_LiSt changed to  completedList
-	private Book bOoK;
-	
+	//private Book bOoK;
+	private Book book;			//bOok changed to book
 	
 	public bORROW_bOOK_cONTROL() {
 		this.lIbRaRy = Library.GeTiNsTaNcE();
