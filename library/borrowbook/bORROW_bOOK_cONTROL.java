@@ -22,18 +22,24 @@ public class BorrowBookControl
 	
 	//private List<Book> pEnDiNg_LiSt; 
 	private List<Book> pendingList;    //private List<Book> pEnDiNg_List changed to private List<Book> pendingList
-	private List<Loan> cOmPlEtEd_LiSt;
-	private Book bOoK;
+	//private List<Loan> cOmPlEtEd_LiSt;
+	private List<Loan> completedList; 	// cOmPlEtEd_LiSt changed to  completedList
+	//private Book bOoK;
+	private Book book;			//bOok changed to book
 	
-	
-	public bORROW_bOOK_cONTROL() {
-		this.lIbRaRy = Library.GeTiNsTaNcE();
-		sTaTe = CONTROL_STATE.INITIALISED;
+	//public bORROW_bOOK_cONTROL() 
+	public borrowBookControl(){		//bORROW_bOOK_cONTROL() changed to borrowBookControl
+		//this.lIbRaRy = Library.GeTiNsTaNcE();
+		this.Library = Library.getInstance();  	//this.lIbRaRy = Library.GeTiNsTaNcE(); changed to this.Library = Library.getInstance();
+		//sTaTe = CONTROL_STATE.INITIALISED;
+		state = =ControlState.INITIALISED;	//sTaTe = CONTROL_STATE.INITIALISED; changed to state = =ControlState.INITIALISED;
 	}
 	
 
-	public void SeT_Ui(BorrowBookUI Ui) {
-		if (!sTaTe.equals(CONTROL_STATE.INITIALISED)) 
+	//public void SeT_Ui(BorrowBookUI Ui)
+	public void setUi(BorrowBookUi ui){		//public void SeT_Ui(BorrowBookUI Ui) changed to public void setUi(BorrowBookUi ui)
+		//if (!sTaTe.equals(CONTROL_STATE.INITIALISED)) 
+		if (!state.equals(ControlState.INITIALISED)) 	//if (!sTaTe.equals(CONTROL_STATE.INITIALISED)) changed to if (!state.equals(ControlState.INITIALISED)) 
 			throw new RuntimeException("BorrowBookControl: cannot call setUI except in INITIALISED state");
 			
 		this.uI = Ui;
