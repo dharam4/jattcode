@@ -37,13 +37,13 @@ public class PayFineUI {
 			switch (state) {            //StAtE
 			
 			case READY:
-				String memstr = input("Swipe member card (press <enter> to cancel): ");     //Mem_Str
-				if (memstr.length() == 0) {       //Mem_Str
+				String memStr = input("Swipe member card (press <enter> to cancel): ");     //Mem_Str
+				if (memStr.length() == 0) {       //Mem_Str
 					control.cancel();         //CoNtRoL.CaNcEl
 					break;
 				}
 				try {
-					int memberId = Integer.valueOf(memstr).intValue();     //Member_ID, Mem_Str
+					int memberId = Integer.valueOf(memStr).intValue();     //Member_ID, Mem_Str
 					control.cardSwipe(memberId);                        //CoNtRoL.CaRd_sWiPeD(Member_ID)
 				}
 				catch (NumberFormatException e) {
@@ -53,8 +53,8 @@ public class PayFineUI {
 				
 			case PAYING:
 				double amount = 0;                                              //AmouNT
-				String amtstr = input("Enter amount (<Enter> cancels) : ");     //Amt_Str 
-				if (amtstr.length() == 0) {                                    //Amt_Str
+				String amtStr = input("Enter amount (<Enter> cancels) : ");     //Amt_Str 
+				if (amtStr.length() == 0) {                                    //Amt_Str
 					control.cancel();                                      //CoNtRoL.CaNcEl()
 				
 	
