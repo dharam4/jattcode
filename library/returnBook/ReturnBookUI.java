@@ -48,7 +48,7 @@ public class ReturnBookUI {
 				
 			case READY:
 				//String BoOk_InPuT_StRiNg = iNpUt("Scan Book (<enter> completes): ");
-				String Bookinputstring = input("Scan book (<enter> completes): ");
+				String bookinputstring = input("Scan book (<enter> completes): ");
 				if (BoOk_InPuT_StRiNg.length() == 0) 
 					CoNtRoL.sCaNnInG_cOmPlEtE();
 				
