@@ -1,3 +1,7 @@
+// Author : Dipanshu Kumar
+// Mediator : Navjeevan Kaur 
+// Reviewer : Dharamveer Singh
+
 package library.payfine;                               
 import java.util.Scanner;
 
@@ -25,22 +29,22 @@ public class PayFineUI {
 	}
 
 
-	public void RuN() {
+	public void run() {                          //RuN
 		output("Pay Fine Use Case UI\n");
 		
 		while (true) {
 			
-			switch (StAtE) {
+			switch (state) {            //StAtE
 			
 			case READY:
-				String Mem_Str = input("Swipe member card (press <enter> to cancel): ");
-				if (Mem_Str.length() == 0) {
-					CoNtRoL.CaNcEl();
+				String memStr = input("Swipe member card (press <enter> to cancel): ");     //Mem_Str
+				if (memStr.length() == 0) {       //Mem_Str
+					control.cancel();         //CoNtRoL.CaNcEl
 					break;
 				}
 				try {
-					int Member_ID = Integer.valueOf(Mem_Str).intValue();
-					CoNtRoL.CaRd_sWiPeD(Member_ID);
+					int memberId = Integer.valueOf(memStr).intValue();     //Member_ID, Mem_Str
+					control.cardSwipe(memberId);                        //CoNtRoL.CaRd_sWiPeD(Member_ID)
 				}
 				catch (NumberFormatException e) {
 					output("Invalid memberId");
@@ -48,10 +52,12 @@ public class PayFineUI {
 				break;
 				
 			case PAYING:
-				double AmouNT = 0;
-				String Amt_Str = input("Enter amount (<Enter> cancels) : ");
-				if (Amt_Str.length() == 0) {
-					CoNtRoL.CaNcEl();
+				double amount = 0;                                              //AmouNT
+				String amtStr = input("Enter amount (<Enter> cancels) : ");     //Amt_Str 
+				if (amtStr.length() == 0) {                                    //Amt_Str
+					control.cancel();                                      //CoNtRoL.CaNcEl()
+				
+	
 					break;
 				}
 				try {
