@@ -61,14 +61,14 @@ public class PayFineUI {
 					break;
 				}
 				try {
-					AmouNT = Double.valueOf(Amt_Str).doubleValue();
+					amount = Double.valueOf(amtStr).doubleValue();       //AmouNT = Double.valueOf(Amt_Str).doubleValue();
 				}
 				catch (NumberFormatException e) {}
-				if (AmouNT <= 0) {
+				if (amount <= 0) {                                          //(AmouNT <= 0)
 					output("Amount must be positive");
 					break;
 				}
-				CoNtRoL.PaY_FiNe(AmouNT);
+				control.payFine(amount);                                   //CoNtRoL.PaY_FiNe(AmouNT);
 				break;
 								
 			case CANCELLED:
