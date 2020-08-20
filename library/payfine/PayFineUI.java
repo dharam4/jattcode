@@ -1,46 +1,50 @@
-package library.payfine;
+// Author : Dipanshu Kumar
+// Mediator : Navjeevan Kaur 
+// Reviewer : Dharamveer Singh
+
+package library.payfine;                               
 import java.util.Scanner;
 
 
 public class PayFineUI {
 
 
-	public static enum uI_sTaTe { INITIALISED, READY, PAYING, COMPLETED, CANCELLED };
+	public static enum UiState                     //uI_sTaTe { INITIALISED, READY, PAYING, COMPLETED, CANCELLED };
 
-	private pAY_fINE_cONTROL CoNtRoL;
+	private PayFineControl control;                //pAY_fINE_cONTROL CoNtRoL
 	private Scanner input;
-	private uI_sTaTe StAtE;
+	private UiState state;                         //uI_sTaTe StAtE
 
 	
-	public PayFineUI(pAY_fINE_cONTROL control) {
-		this.CoNtRoL = control;
+	public PayFineUi(PayFineControl control)       //PayFineUI(pAY_fINE_cONTROL control){
+		this.control = control;                //CoNtRoL
 		input = new Scanner(System.in);
-		StAtE = uI_sTaTe.INITIALISED;
-		control.SeT_uI(this);
+		state = UiState.INITIALISED;           //StAtE=uI_sTaTe.INITIALISED
+		control.setUi(this);                  //control.SeT_uI(this);
 	}
 	
 	
-	public void SeT_StAtE(uI_sTaTe state) {
-		this.StAtE = state;
+	public void setState(UiState state)           //SeT_StAtE(uI_sTaTe state){
+		this.state = state;                   //this.StAtE = state;
 	}
 
 
-	public void RuN() {
+	public void run() {                          //RuN
 		output("Pay Fine Use Case UI\n");
 		
 		while (true) {
 			
-			switch (StAtE) {
+			switch (state) {            //StAtE
 			
 			case READY:
-				String Mem_Str = input("Swipe member card (press <enter> to cancel): ");
-				if (Mem_Str.length() == 0) {
-					CoNtRoL.CaNcEl();
+				String memStr = input("Swipe member card (press <enter> to cancel): ");     //Mem_Str
+				if (memStr.length() == 0) {       //Mem_Str
+					control.cancel();         //CoNtRoL.CaNcEl
 					break;
 				}
 				try {
-					int Member_ID = Integer.valueOf(Mem_Str).intValue();
-					CoNtRoL.CaRd_sWiPeD(Member_ID);
+					int memberId = Integer.valueOf(memStr).intValue();     //Member_ID, Mem_Str
+					control.cardSwipe(memberId);                        //CoNtRoL.CaRd_sWiPeD(Member_ID)
 				}
 				catch (NumberFormatException e) {
 					output("Invalid memberId");
@@ -48,10 +52,12 @@ public class PayFineUI {
 				break;
 				
 			case PAYING:
-				double AmouNT = 0;
-				String Amt_Str = input("Enter amount (<Enter> cancels) : ");
-				if (Amt_Str.length() == 0) {
-					CoNtRoL.CaNcEl();
+				double amount = 0;                                              //AmouNT
+				String amtStr = input("Enter amount (<Enter> cancels) : ");     //Amt_Str 
+				if (amtStr.length() == 0) {                                    //Amt_Str
+					control.cancel();                                      //CoNtRoL.CaNcEl()
+				
+	
 					break;
 				}
 				try {

@@ -1,2 +1,2 @@
 # jattcode
-This project is used for educational perpose
+This project is used for educational purpose
