@@ -14,7 +14,7 @@ public class PayFineControl {                          // pAY_fINE_cONTROL
 
 	public PayFineControl() {                          //pAY_fINE_cONTROL()
 		this.Library = Library.getInstance();     //this.LiBrArY = Library.GeTiNsTaNcE()      
-		StAtE = cOnTrOl_sTaTe.INITIALISED;
+		state = ControlState.INITIALISED;        //StAtE = cOnTrOl_sTaTe.INITIALISED
 	}
 	
 	
