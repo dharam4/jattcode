@@ -9,10 +9,10 @@ public class PayFineControl {                          // pAY_fINE_cONTROL
 	private ControlState state;                  // cOnTrOl_sTaTe StAtE
 	
 	private Librarylibrary;                     //LiBrArY
-	private Member MeMbEr;
+	private Member member;                      //MeMbEr
 
 
-	public pAY_fINE_cONTROL() {
+	public PayFineControl() {                //pAY_fINE_cONTROL()
 		this.LiBrArY = Library.GeTiNsTaNcE();
 		StAtE = cOnTrOl_sTaTe.INITIALISED;
 	}
