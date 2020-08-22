@@ -100,9 +100,9 @@ public class Book implements Serializable {
 	}
 
 
-	public void ReTuRn(boolean DaMaGeD) {
+	/*public void ReTuRn(boolean DaMaGeD) {
 		if (StAtE.equals(sTaTe.ON_LOAN)) 
-			if (DaMaGeD) 
+				if (DaMaGeD) 
 				StAtE = sTaTe.DAMAGED;
 			
 			else 
@@ -110,8 +110,21 @@ public class Book implements Serializable {
 			
 		
 		else 
-			throw new RuntimeException(String.format("Book: cannot Return while book is in state: %s", StAtE));
+			throw new RuntimeException(String.format("Book: cannot Return while book is in state: %s", StAtE));*/
+		
+	public void return(boolean damaged) {  // ReTuRn  to return,  DaMaGeD to damaged
+		if (state.equals(State.ON_LOAN)) 
+			if (damaged)            //DaMaGeD to damaged
 				
+				state= State.DAMAGED;			//StAtE to state and sTaTe to State
+			
+			else 
+				state = State.AVAILABLE;		//StAtE to state and sTaTe to State
+			
+		
+		else 
+			throw new RuntimeException(String.format("Book: cannot Return while book is in state: %s", state)); //StAtE to state 
+			
 	}
 
 	
