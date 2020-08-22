@@ -48,10 +48,6 @@ public class ReturnBookUI {
 				
 			case READY:
 				//String BoOk_InPuT_StRiNg = iNpUt("Scan Book (<enter> completes): ");
-
-				String bookinputstring = input("Scan book (<enter> completes): ");
-				if (BoOk_InPuT_StRiNg.length() == 0) 
-					CoNtRoL.sCaNnInG_cOmPlEtE();
 				String bookInputString = input("Scan book (<enter> completes): ");
 				//if (BoOk_InPuT_StRiNg.length() == 0) 
 					if (Book_Input_String.Length() ==0)
@@ -61,53 +57,74 @@ public class ReturnBookUI {
 				
 				else {
 					try {
-						int Book_Id = Integer.valueOf(BoOk_InPuT_StRiNg).intValue();
+						//int Book_Id = Integer.valueOf(BoOk_InPuT_StRiNg).intValue();
+						int Book_Id = Integer. valueof (BookReturnString). intvalue();
 						 
-						CoNtRoL.bOoK_sCaNnEd(Book_Id);
+						//CoNtRoL.bOoK_sCaNnEd(Book_Id);
+						ControlBookScanned(book_Id);
 					}
 					catch (NumberFormatException e) {
-						oUtPuT("Invalid bookId");
+						//oUtPuT("Invalid bookId");
+						Output("Invaild bookId");
 					}					
 				}
 				break;				
 				
 			case INSPECTING:
-				String AnS = iNpUt("Is book damaged? (Y/N): ");
-				boolean Is_DAmAgEd = false;
-				if (AnS.toUpperCase().equals("Y")) 					
-					Is_DAmAgEd = true;
+				//String AnS = iNpUt("Is book damaged? (Y/N): ");
+					String Ans= input(Is book damaged? (Y/N):");
+				//boolean Is_DAmAgEd = false;
+					boolean Is_damaged = false;
+							  
+				//if (AnS.toUpperCase().equals("Y")) 
+					if (Ans. toUpperCase(). equals("Y"))
+					//Is_dAmagEd = true;
+					Is_damaged - true;
 				
-				CoNtRoL.dIsChArGe_lOaN(Is_DAmAgEd);
+				//CoNtRoL.dIsChArGe_lOaN(Is_DAmAgEd);
+				Control.Discharge_loan(Is_damaged);
 			
 			case COMPLETED:
-				oUtPuT("Return processing complete");
+				//oUtPuT("Return processing complete");
+			          Output("Return processing complete");
 				return;
 			
 			default:
-				oUtPuT("Unhandled state");
-				throw new RuntimeException("ReturnBookUI : unhandled state :" + StATe);			
+				//oUtPuT("Unhandled state");
+				Output("Unhandled state")
+				//throw new RuntimeException("ReturnBookUI : unhandled state :" + StATe);
+				throw new RuntimeException("ReturnBookUI : unhandled state :" + state);				  
 			}
 		}
 	}
 
 	
-	private String iNpUt(String PrOmPt) {
-		System.out.print(PrOmPt);
-		return iNpUt.nextLine();
+	//private String iNpUt(String PrOmPt) {
+		private string inout(String Prompt) {
+		//System.out.print(PrOmPt);
+		Syatem.out.print(Promot)
+		//return iNpUt.nextLine();
+		return input.nextline();
 	}	
 		
 		
-	private void oUtPuT(Object ObJeCt) {
-		System.out.println(ObJeCt);
+	//private void oUtPuT(Object ObJeCt) {
+	private void output(Object Object) {						  
+		//System.out.println(ObJeCt);
+		System.out.println(Object);
 	}
 	
 			
-	public void DiSpLaY(Object object) {
-		oUtPuT(object);
+	//public void DiSpLaY(Object object) {
+	public void Display(Object Object)
+		//oUtPuT(object);
+		output(Object)
 	}
 	
-	public void sEt_sTaTe(uI_sTaTe state) {
-		this.StATe = state;
+	//public void sEt_sTaTe(uI_sTaTe state);
+		public void SetState(UiState state);					  
+		//this.StATe = state;
+		this.State = state;
 	}
 
 	
