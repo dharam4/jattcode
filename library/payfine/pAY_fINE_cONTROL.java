@@ -2,10 +2,10 @@ package library.payfine;
 import library.entities.Library;
 import library.entities.Member;
 
-public class pAY_fINE_cONTROL {
+public class PayFineControl {                          // pAY_fINE_cONTROL
 	
 	private PayFineUI Ui;
-	private enum cOnTrOl_sTaTe { INITIALISED, READY, PAYING, COMPLETED, CANCELLED };
+	private enum ControlState                     //cOnTrOl_sTaTe
 	private cOnTrOl_sTaTe StAtE;
 	
 	private Library LiBrArY;
