@@ -6,7 +6,7 @@ public class PayFineControl {                          // pAY_fINE_cONTROL
 	
 	private PayFineUI Ui;
 	private enum ControlState                     //cOnTrOl_sTaTe
-	private cOnTrOl_sTaTe StAtE;
+	private ControlState state;                  // cOnTrOl_sTaTe StAtE
 	
 	private Library LiBrArY;
 	private Member MeMbEr;
