@@ -12,8 +12,8 @@ public class PayFineControl {                          // pAY_fINE_cONTROL
 	private Member member;                      //MeMbEr
 
 
-	public PayFineControl() {                //pAY_fINE_cONTROL()
-		this.LiBrArY = Library.GeTiNsTaNcE();
+	public PayFineControl() {                          //pAY_fINE_cONTROL()
+		this.Library = Library.getInstance();     //this.LiBrArY = Library.GeTiNsTaNcE()      
 		StAtE = cOnTrOl_sTaTe.INITIALISED;
 	}
 	
