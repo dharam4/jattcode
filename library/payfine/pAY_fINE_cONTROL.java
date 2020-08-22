@@ -22,7 +22,7 @@ public class PayFineControl {                          // pAY_fINE_cONTROL
 		if (!state.equals(ControlState.INITIALISED)) {     //(!StAtE.equals(cOnTrOl_sTaTe.INITIALISED))
 			throw new RuntimeException("PayFineControl: cannot call setUI except in INITIALISED state");
 		}	
-		this.Ui = uI;
+		this.Ui = Ui;                //uI
 		uI.SeT_StAtE(PayFineUI.uI_sTaTe.READY);
 		StAtE = cOnTrOl_sTaTe.READY;		
 	}
