@@ -8,7 +8,7 @@ public class PayFineControl {                          // pAY_fINE_cONTROL
 	private enum ControlState                     //cOnTrOl_sTaTe
 	private ControlState state;                  // cOnTrOl_sTaTe StAtE
 	
-	private Library LiBrArY;
+	private Librarylibrary;                     //LiBrArY
 	private Member MeMbEr;
 
 
