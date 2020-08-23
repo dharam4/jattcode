@@ -44,8 +44,11 @@ public class BorrowBookControl
 			
 		//this.uI = Ui;
 		this.ui = ui;				//uI and Ui changed to ui
-		Ui.SeT_StAtE(BorrowBookUI.uI_STaTe.READY);
-		sTaTe = CONTROL_STATE.READY;		
+		//Ui.SeT_StAtE(BorrowBookUI.uI_STaTe.READY);
+		ui.setState(BorrowBookUi.uiState.READY); 	
+		
+		//sTaTe = CONTROL_STATE.READY;
+		state = ControlState.READY;
 	}
 
 		
