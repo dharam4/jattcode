@@ -149,12 +149,16 @@ public class BorrowBookControl
 
 	//public void CoMmIt_LoAnS() 					//CoMmIt_LoAnS() changed to commitLoans()
 	public void commitLoans() {
-		if (!sTaTe.equals(CONTROL_STATE.FINALISING)) 
+		//if (!sTaTe.equals(CONTROL_STATE.FINALISING))
+		if (!state.equals(ControlState.FINALISING))		//if (!sTaTe.equals(CONTROL_STATE.FINALISING)) changed to if (!state.equals(ControlState.FINALISING))
 			throw new RuntimeException("BorrowBookControl: cannot call commitLoans except in FINALISING state");
 			
-		for (Book B : pEnDiNg_LiSt) {
-			Loan lOaN = lIbRaRy.iSsUe_LoAn(B, mEmBeR);
-			cOmPlEtEd_LiSt.add(lOaN);			
+		//for (Book B : pEnDiNg_LiSt) 
+		for (Book B : pendingList) {
+			//Loan lOaN = lIbRaRy.iSsUe_LoAn(B, mEmBeR);
+			Loan loan = Library.issueLoan(B, member);
+			//cOmPlEtEd_LiSt.add(lOaN);
+			completedList.add(loan);
 		}
 		uI.DiSpLaY("Completed Loan Slip");
 		for (Loan LOAN : cOmPlEtEd_LiSt) 
