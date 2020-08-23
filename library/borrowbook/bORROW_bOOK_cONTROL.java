@@ -134,7 +134,7 @@ public class BorrowBookControl
 			ui.display("\nFinal Borrowing List");
 			//for (Book bOoK : pEnDiNg_LiSt)
 			for (Book book : pendingList)
-				//uI.DiSpLaY(bOoK.toString());
+				//uI.DiSpLaY(bOoK.toString());			uI.DiSpLaY(bOoK.toString());  changed to ui.display(book.toString());
 				ui.display(book.toString());
 			
 			cOmPlEtEd_LiSt = new ArrayList<Loan>();
