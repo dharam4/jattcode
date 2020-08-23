@@ -157,12 +157,15 @@ public class BorrowBookControl
 		for (Book B : pendingList) {
 			//Loan lOaN = lIbRaRy.iSsUe_LoAn(B, mEmBeR);
 			Loan loan = Library.issueLoan(B, member);
-			//cOmPlEtEd_LiSt.add(lOaN);
+			//cOmPlEtEd_LiSt.add(lOaN);			//cOmPlEtEd_LiSt.add(lOaN); changed to completedList.add(loan);
 			completedList.add(loan);
 		}
-		uI.DiSpLaY("Completed Loan Slip");
-		for (Loan LOAN : cOmPlEtEd_LiSt) 
-			uI.DiSpLaY(LOAN.toString());
+		//uI.DiSpLaY("Completed Loan Slip");
+		ui.display("Completed Loan Slip");
+		//for (Loan LOAN : cOmPlEtEd_LiSt)
+		for (Loan loan : completedList)
+			//uI.DiSpLaY(LOAN.toString());
+			ui.display(loan.toString());
 		
 		uI.SeT_StAtE(BorrowBookUI.uI_STaTe.COMPLETED);
 		sTaTe = CONTROL_STATE.COMPLETED;
