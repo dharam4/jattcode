@@ -94,17 +94,23 @@ public class BorrowBookControl
 			
 		//bOoK = lIbRaRy.gEt_BoOk(bOoKiD);
 		booK = Library.getBook(bookId); 			//bOoK = lIbRaRy.gEt_BoOk(bOoKiD) changed to booK = Library.getBook(bookId);
-		if (bOoK == null) {
-			uI.DiSpLaY("Invalid bookId");
+		//if (bOoK == null)
+		if (book == null) {					//bOok changed to book
+			//uI.DiSpLaY("Invalid bookId");
+			ui.display("Invalid bookId");			//uI.DiSpLaY("Invalid bookId"); changed to ui.display("Invalid bookId");
 			return;
 		}
-		if (!bOoK.iS_AvAiLaBlE()) {
+		//if (!bOoK.iS_AvAiLaBlE())
+		if (!book.isAvailable()) {				//book.isAvailable changed to book.isAviable
 			uI.DiSpLaY("Book cannot be borrowed");
 			return;
 		}
-		pEnDiNg_LiSt.add(bOoK);
-		for (Book B : pEnDiNg_LiSt) 
-			uI.DiSpLaY(B.toString());
+		//pEnDiNg_LiSt.add(bOoK);
+		pendingList.add(book);					//pEnDiNg_LiSt.add(bOoK) changed to pendingList.add(bOok)
+		//for (Book B : pEnDiNg_LiSt)
+		for (Book B : pendingList)				//pEnDiNg_LiSt changed to pendingList
+			//uI.DiSpLaY(B.toString());
+			ui.display(B.toString());			//uI.DiSpLaY(B.toString()); changed to ui.display(B.toString());
 		
 		if (lIbRaRy.gEt_NuMbEr_Of_LoAnS_ReMaInInG_FoR_MeMbEr(mEmBeR) - pEnDiNg_LiSt.size() == 0) {
 			uI.DiSpLaY("Loan limit reached");
