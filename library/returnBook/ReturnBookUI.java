@@ -48,20 +48,20 @@ public class ReturnBookUI {
 				
 			case READY:
 				//String BoOk_InPuT_StRiNg = iNpUt("Scan Book (<enter> completes): ");
-				String bookInputString = input("Scan book (<enter> completes): ");
+				String BookInputString = input("Scan book (<enter> completes): ");
 				//if (BoOk_InPuT_StRiNg.length() == 0) 
-					if (Book_Input_String.Length() ==0)
+					if (bookInputString.Length() ==0)
 					//CoNtRoL.sCaNnInG_cOmPlEtE();
-					Control. Scanning_Complete();
+					Control. ScanningComplete();
 
 				
 				else {
 					try {
 						//int Book_Id = Integer.valueOf(BoOk_InPuT_StRiNg).intValue();
-						int Book_Id = Integer. valueof (BookReturnString). intvalue();
+						int bookId = Integer.valueOf(bookInputString).intValue();
 						 
 						//CoNtRoL.bOoK_sCaNnEd(Book_Id);
-						ControlBookScanned(book_Id);
+						Control.bookScanned(bookId);
 					}
 					catch (NumberFormatException e) {
 						//oUtPuT("Invalid bookId");
@@ -72,17 +72,17 @@ public class ReturnBookUI {
 				
 			case INSPECTING:
 				//String AnS = iNpUt("Is book damaged? (Y/N): ");
-					String Ans= input(Is book damaged? (Y/N):");
+					String ans= input(Is book damage? (Y/N):");
 				//boolean Is_DAmAgEd = false;
-					boolean Is_damaged = false;
+					boolean isDamage = false;
 							  
 				//if (AnS.toUpperCase().equals("Y")) 
-					if (Ans. toUpperCase(). equals("Y"))
+					if (ans.toUpperCase(). equals("Y"))
 					//Is_dAmagEd = true;
-					Is_damaged - true;
+					isDamage - true;
 				
 				//CoNtRoL.dIsChArGe_lOaN(Is_DAmAgEd);
-				Control.Discharge_loan(Is_damaged);
+				Control.dischargeLoan(isdamage);
 			
 			case COMPLETED:
 				//oUtPuT("Return processing complete");
@@ -100,31 +100,31 @@ public class ReturnBookUI {
 
 	
 	//private String iNpUt(String PrOmPt) {
-		private string inout(String Prompt) {
+		private string input(String prompt) {
 		//System.out.print(PrOmPt);
-		Syatem.out.print(Promot)
+		Syatem.out.print(promot)
 		//return iNpUt.nextLine();
-		return input.nextline();
+		return input.nextLine();
 	}	
 		
 		
 	//private void oUtPuT(Object ObJeCt) {
-	private void output(Object Object) {						  
+	private void output(object object) {						  
 		//System.out.println(ObJeCt);
-		System.out.println(Object);
+		System.out.println(object);
 	}
 	
 			
 	//public void DiSpLaY(Object object) {
-	public void Display(Object Object)
+	public void display(object object)
 		//oUtPuT(object);
-		output(Object)
+		output(object)
 	}
 	
 	//public void sEt_sTaTe(uI_sTaTe state);
-		public void SetState(UiState state);					  
+		public void setState(UiState state);					  
 		//this.StATe = state;
-		this.State = state;
+		this.state = state;
 	}
 
 	
