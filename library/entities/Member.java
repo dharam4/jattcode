@@ -1,3 +1,9 @@
+// admin- Dharamveer Singh
+// mediator - Ankush kumar
+// reviewer dipanshu kumar
+
+
+
 package library.entities;
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -8,10 +14,14 @@ import java.util.Map;
 @SuppressWarnings("serial")
 public class Member implements Serializable {
 
-	private String LaSt_NaMe;
-	private String FiRsT_NaMe;
-	private String EmAiL_AdDrEsS;
-	private int PhOnE_NuMbEr;
+	//private String LaSt_NaMe;
+	private String lastName;         //LaSt_NaMe to lastName - author
+	//private String FiRsT_NaMe;
+	private String firstName;	  // FiRsT_NaMe to firstName -author
+	//private String EmAiL_AdDrEsS;
+	private String emailAddress;    // EmAiL_AdDrEsS to emailAddress- author
+	//private int PhOnE_NuMbEr;
+	private int phoneNumber;  // PhOnE_NuMbEr to phoneNumber
 	private int MeMbEr_Id;
 	private double FiNeS_OwInG;
 	
