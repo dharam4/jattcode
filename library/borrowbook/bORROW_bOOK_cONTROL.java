@@ -88,10 +88,12 @@ public class BorrowBookControl
 	public void scanned(int bookId) { 				//ScAnNed and bOoKiD changed to scanned and bookId
 		//bOoK = null;
 		book = null;						//bOok changed to book
-		if (!sTaTe.equals(CONTROL_STATE.SCANNING)) 
+		//if (!sTaTe.equals(CONTROL_STATE.SCANNING))
+		if (!state.equals(ControlState.SCANNING))		//!sTaTe.equals(CONTROL_STATE changed to state.equals(ControlState
 			throw new RuntimeException("BorrowBookControl: cannot call bookScanned except in SCANNING state");
 			
-		bOoK = lIbRaRy.gEt_BoOk(bOoKiD);
+		//bOoK = lIbRaRy.gEt_BoOk(bOoKiD);
+		booK = Library.getBook(bookId); 			//bOoK = lIbRaRy.gEt_BoOk(bOoKiD) changed to booK = Library.getBook(bookId);
 		if (bOoK == null) {
 			uI.DiSpLaY("Invalid bookId");
 			return;
