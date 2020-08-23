@@ -98,8 +98,10 @@ public class Member implements Serializable {
 	}
 
 	
-	public double FiNeS_OwEd() {
-		return FiNeS_OwInG;
+	//public double FiNeS_OwEd() {
+	public double fineOwed() { // FiNeS_OwEd to fineOwed
+		//return FiNeS_OwInG;
+		return finesOwing;
 	}
 
 	
