@@ -130,9 +130,12 @@ public class BorrowBookControl
 			cancel();						//CaNcEl(); changed to cancel
 		
 		else {
-			uI.DiSpLaY("\nFinal Borrowing List");
-			for (Book bOoK : pEnDiNg_LiSt) 
-				uI.DiSpLaY(bOoK.toString());
+			//uI.DiSpLaY("\nFinal Borrowing List");
+			ui.display("\nFinal Borrowing List");
+			//for (Book bOoK : pEnDiNg_LiSt)
+			for (Book book : pendingList)
+				//uI.DiSpLaY(bOoK.toString());
+				ui.display(book.toString());
 			
 			cOmPlEtEd_LiSt = new ArrayList<Loan>();
 			uI.SeT_StAtE(BorrowBookUI.uI_STaTe.FINALISING);
