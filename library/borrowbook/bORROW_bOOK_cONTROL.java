@@ -137,14 +137,18 @@ public class BorrowBookControl
 				//uI.DiSpLaY(bOoK.toString());			uI.DiSpLaY(bOoK.toString());  changed to ui.display(book.toString());
 				ui.display(book.toString());
 			
-			cOmPlEtEd_LiSt = new ArrayList<Loan>();
-			uI.SeT_StAtE(BorrowBookUI.uI_STaTe.FINALISING);
-			sTaTe = CONTROL_STATE.FINALISING;
+			//cOmPlEtEd_LiSt = new ArrayList<Loan>();
+			completedList = new ArrayList<Loan>();			//cOmPlEtEd_LiSt changed to completedList
+			//uI.SeT_StAtE(BorrowBookUI.uI_STaTe.FINALISING);
+			ui.setState(BorrowBookUi.uiState.FINALISING);
+			//sTaTe = CONTROL_STATE.FINALISING;
+			state = ControlState.FINALISING;
 		}
 	}
 
 
-	public void CoMmIt_LoAnS() {
+	//public void CoMmIt_LoAnS() 					//CoMmIt_LoAnS() changed to commitLoans()
+	public void commitLoans() {
 		if (!sTaTe.equals(CONTROL_STATE.FINALISING)) 
 			throw new RuntimeException("BorrowBookControl: cannot call commitLoans except in FINALISING state");
 			
