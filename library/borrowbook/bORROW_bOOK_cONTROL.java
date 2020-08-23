@@ -167,14 +167,19 @@ public class BorrowBookControl
 			//uI.DiSpLaY(LOAN.toString());
 			ui.display(loan.toString());
 		
-		uI.SeT_StAtE(BorrowBookUI.uI_STaTe.COMPLETED);
-		sTaTe = CONTROL_STATE.COMPLETED;
+		//uI.SeT_StAtE(BorrowBookUI.uI_STaTe.COMPLETED);
+		ui.setState(BorrowBookUi.uiState.COMPLETED);
+		//sTaTe = CONTROL_STATE.COMPLETED;
+		state = ControlState.COMPLETED;
 	}
 
 	
-	public void CaNcEl() {
-		uI.SeT_StAtE(BorrowBookUI.uI_STaTe.CANCELLED);
-		sTaTe = CONTROL_STATE.CANCELLED;
+	//public void CaNcEl()
+	public void cancel() {
+		//uI.SeT_StAtE(BorrowBookUI.uI_STaTe.CANCELLED);
+		ui.setState(BorrowBookUi.uiState.CANCELLED);
+		//sTaTe = CONTROL_STATE.CANCELLED;
+		state = ControlState.COMPLETED;
 	}
 	
 	
