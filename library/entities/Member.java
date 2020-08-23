@@ -19,11 +19,13 @@ public class Member implements Serializable {
 	//private String FiRsT_NaMe;
 	private String firstName;	  // FiRsT_NaMe to firstName -author
 	//private String EmAiL_AdDrEsS;
-	private String emailAddress;    // EmAiL_AdDrEsS to emailAddress- author
+	private String emailAddress;    // EmAiL_AdDrEsS to emailAddress -author
 	//private int PhOnE_NuMbEr;
-	private int phoneNumber;  // PhOnE_NuMbEr to phoneNumber
-	private int MeMbEr_Id;
-	private double FiNeS_OwInG;
+	private int phoneNumber;  // PhOnE_NuMbEr to phoneNumber-author
+	// private int MeMbEr_Id;
+	private int memberId;  //MeMbEr_Id to memberId -author
+	//private double FiNeS_OwInG;
+	private double finesOwing;  	//FiNeS_OwInG to private finesOwing -author
 	
 	private Map<Integer, Loan> cUrReNt_lOaNs;
 
