@@ -76,18 +76,25 @@ public class Member implements Serializable {
 	}
 
 	
-	public int GeT_ID() {
-		return MeMbEr_Id;
+	/*public int GeT_ID() {
+		return MeMbEr_Id;*/
+	public int getId() { //	GeT_ID to getId - author
+		
+		return memberId;	// MeMbEr_Id to memberId
 	}
 
 	
-	public List<Loan> GeT_LoAnS() {
-		return new ArrayList<Loan>(cUrReNt_lOaNs.values());
+	//public List<Loan> GeT_LoAnS() {
+	public List<loan> getLoans() { 	// GeT_LoAnS to getLoans, Loan to loan
+		
+		//return new ArrayList<Loan>(cUrReNt_lOaNs.values());
+		return new ArrayList<loan>(currentLoan.values());	// cUrReNt_lOaNs to currentLoan ,Loan to loan - author
 	}
 
 	
-	public int gEt_nUmBeR_Of_CuRrEnT_LoAnS() {
-		return cUrReNt_lOaNs.size();
+	//public int gEt_nUmBeR_Of_CuRrEnT_LoAnS() {
+	public int getNumberOfCurrentLoans() { 		//gEt_nUmBeR_Of_CuRrEnT_LoAnS to getNumberOfCurrentLoans
+		return currentLoans.size();   		// cUrReNt_lOaNs to currentLoan
 	}
 
 	
