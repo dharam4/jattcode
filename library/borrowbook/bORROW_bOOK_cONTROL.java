@@ -122,9 +122,12 @@ public class BorrowBookControl
 	}
 	
 	
-	public void CoMpLeTe() {
-		if (pEnDiNg_LiSt.size() == 0) 
-			CaNcEl();
+	//public void CoMpLeTe() 
+	public void complete {							//CoMpLeTe changed to complete
+		//if (pEnDiNg_LiSt.size() == 0)
+		if (pendingList.size() == 0)					//(pEnDiNg_LiSt.size() changed to pendingList
+			//CaNcEl();
+			cancel();						//CaNcEl(); changed to cancel
 		
 		else {
 			uI.DiSpLaY("\nFinal Borrowing List");
