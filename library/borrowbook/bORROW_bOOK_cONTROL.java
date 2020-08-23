@@ -62,13 +62,18 @@ public class BorrowBookControl
 		member = Library.getMember(memberId);
 		//if (mEmBeR == null) 
 		if (member == null)  {					//mEmBeR changed to member
-			uI.DiSpLaY("Invalid memberId");
+			//uI.DiSpLaY("Invalid memberId");
+			ui.DiSpLaY("Invalid memberId"); 		//uI changed to ui
 			return;
 		}
-		if (lIbRaRy.cAn_MeMbEr_BoRrOw(mEmBeR)) {
-			pEnDiNg_LiSt = new ArrayList<>();
-			uI.SeT_StAtE(BorrowBookUI.uI_STaTe.SCANNING);
-			sTaTe = CONTROL_STATE.SCANNING; 
+		//if (lIbRaRy.cAn_MeMbEr_BoRrOw(mEmBeR)) 
+		if (Library.canMemberBorrow(member)) {			//(lIbRaRy.cAn_MeMbEr_BoRrOw(mEmBeR)) changed to  (Library.canMemberBorrow(member))
+			//pEnDiNg_LiSt = new ArrayList<>();
+			pendingList = new ArrayList<>();		//pEnDiNg_LiSt changed to pendingList
+			//uI.SeT_StAtE(BorrowBookUI.uI_STaTe.SCANNING);
+			ui.setState(BorrowBookUi.uiState.SCANNING);     
+			//sTaTe = CONTROL_STATE.SCANNING;
+			state = ControlState.SCANNING			//sTaTe = CONTROL_STATE changed to state = ControlState
 		}
 		else {
 			uI.DiSpLaY("Member cannot borrow at this time");
