@@ -27,17 +27,20 @@ public class Member implements Serializable {
 	//private double FiNeS_OwInG;
 	private double finesOwing;  	//FiNeS_OwInG to private finesOwing -author
 	
-	private Map<Integer, Loan> cUrReNt_lOaNs;
+	// private Map<Integer, Loan> cUrReNt_lOaNs;
+	private map<Integer, Loan> currentLoan; 	// Map to map , cUrReNt_lOaNs to currentLoan
 
 	
-	public Member(String lAsT_nAmE, String fIrSt_nAmE, String eMaIl_aDdReSs, int pHoNe_nUmBeR, int mEmBeR_iD) {
-		this.LaSt_NaMe = lAsT_nAmE;
-		this.FiRsT_NaMe = fIrSt_nAmE;
-		this.EmAiL_AdDrEsS = eMaIl_aDdReSs;
-		this.PhOnE_NuMbEr = pHoNe_nUmBeR;
-		this.MeMbEr_Id = mEmBeR_iD;
+	//public Member(String lAsT_nAmE, String fIrSt_nAmE, String eMaIl_aDdReSs, int pHoNe_nUmBeR, int mEmBeR_iD) { -author
+	public member(String lastName, String FirstName, String emailAdress, int phoneNumber, int memberId) {
+		this.lastName = lastName; 	//lAsT_nAmE to lastName  -author
+		this.firstName = firstName;	//fIrSt_nAmE to firstName	-author
+		this.emailAdress = emailAdress;// eMaIl_aDdReSs to emailAdress	-author
+		this.phoneNumber = phoneNumber; //PhOnE_NuMbEr to phoneNumber 	-author
+		this.memberId = memberId;	//MeMbEr_Id to memberId	-author
 		
-		this.cUrReNt_lOaNs = new HashMap<>();
+		//this.cUrReNt_lOaNs = new HashMap<>();
+		this.currentLoan = new HashMap<>();		//cUrReNt_lOaNs to currentLoan -author
 	}
 
 	
