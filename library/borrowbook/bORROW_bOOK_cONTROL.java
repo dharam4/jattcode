@@ -63,7 +63,7 @@ public class BorrowBookControl
 		//if (mEmBeR == null) 
 		if (member == null)  {					//mEmBeR changed to member
 			//uI.DiSpLaY("Invalid memberId");
-			ui.DiSpLaY("Invalid memberId"); 		//uI changed to ui
+			ui.display("Invalid memberId"); 		//uI.DiSpLaY changed to ui.display
 			return;
 		}
 		//if (lIbRaRy.cAn_MeMbEr_BoRrOw(mEmBeR)) 
@@ -76,14 +76,18 @@ public class BorrowBookControl
 			state = ControlState.SCANNING			//sTaTe = CONTROL_STATE changed to state = ControlState
 		}
 		else {
-			uI.DiSpLaY("Member cannot borrow at this time");
-			uI.SeT_StAtE(BorrowBookUI.uI_STaTe.RESTRICTED); 
+			//uI.DiSpLaY("Member cannot borrow at this time");
+			ui.display("Member cannot borrow at this time");
+			//uI.SeT_StAtE(BorrowBookUI.uI_STaTe.RESTRICTED); 
+			ui.setState(BorrowBookUI.uiState.RESTRICTED); 
 		}
 	}
 	
 	
-	public void ScAnNeD(int bOoKiD) {
-		bOoK = null;
+	//public void ScAnNeD(int bOoKiD)
+	public void scanned(int bookId) { 				//ScAnNed and bOoKiD changed to scanned and bookId
+		//bOoK = null;
+		book = null;						//bOok changed to book
 		if (!sTaTe.equals(CONTROL_STATE.SCANNING)) 
 			throw new RuntimeException("BorrowBookControl: cannot call bookScanned except in SCANNING state");
 			
