@@ -44,7 +44,7 @@ public class Member implements Serializable {
 	}
 
 	
-	public String toString() {
+	/*public String toString() {
 		StringBuilder sb = new StringBuilder();
 		sb.append("Member:  ").append(MeMbEr_Id).append("\n")
 		  .append("  Name:  ").append(LaSt_NaMe).append(", ").append(FiRsT_NaMe).append("\n")
@@ -56,6 +56,21 @@ public class Member implements Serializable {
 		
 		for (Loan LoAn : cUrReNt_lOaNs.values()) {
 			sb.append(LoAn).append("\n");
+		}		  
+		return sb.toString();
+	}*/
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append("Member:  ").append(memberId).append("\n") //MeMbEr_Id to memberId - author
+		  .append("  Name:  ").append(lastName).append(", ").append(FiRsT_NaMe).append("\n")  // FiRsT_NaMe to firstName , //lAsT_nAmE to lastName-author 
+		  .append("  Email: ").append(emailAdress).append("\n")  // eMaIl_aDdReSs to emailAdress	-author
+		  .append("  Phone: ").append(phoneNumber)  //PhOnE_NuMbEr to phoneNumber 	-author
+		  .append("\n")
+		  .append(String.format("  Fines Owed :  $%.2f", fineOwing)) 	//FiNeS_OwInG to private finesOwing -author
+		  .append("\n");
+		
+		for (Loan loan : currentLoan.values()) {	//Loan to loan ,cUrReNt_lOaNs to currentLoan -author
+			sb.append(loan).append("\n");		// Loan to loan  -author
 		}		  
 		return sb.toString();
 	}
