@@ -112,7 +112,8 @@ public class BorrowBookControl
 			//uI.DiSpLaY(B.toString());
 			ui.display(B.toString());			//uI.DiSpLaY(B.toString()); changed to ui.display(B.toString());
 		
-		if (lIbRaRy.gEt_NuMbEr_Of_LoAnS_ReMaInInG_FoR_MeMbEr(mEmBeR) - pEnDiNg_LiSt.size() == 0) {
+		//if (lIbRaRy.gEt_NuMbEr_Of_LoAnS_ReMaInInG_FoR_MeMbEr(mEmBeR) - pEnDiNg_LiSt.size() == 0)
+		if (Library.getNumberOfLoansRemainingForMember(member) - pendingList.size() == 0) {
 			uI.DiSpLaY("Loan limit reached");
 			CoMpLeTe();
 		}
