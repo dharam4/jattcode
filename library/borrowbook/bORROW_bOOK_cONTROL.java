@@ -114,8 +114,10 @@ public class BorrowBookControl
 		
 		//if (lIbRaRy.gEt_NuMbEr_Of_LoAnS_ReMaInInG_FoR_MeMbEr(mEmBeR) - pEnDiNg_LiSt.size() == 0)
 		if (Library.getNumberOfLoansRemainingForMember(member) - pendingList.size() == 0) {
-			uI.DiSpLaY("Loan limit reached");
-			CoMpLeTe();
+			//uI.DiSpLaY("Loan limit reached");
+			ui.display("Loan limit reached");			//uI.DiSpLay changed to ui.display
+			//CoMpLeTe();
+			complete();						//CoMpLeTe changed to complete
 		}
 	}
 	
