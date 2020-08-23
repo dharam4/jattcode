@@ -105,9 +105,12 @@ public class Member implements Serializable {
 	}
 
 	
-	public void TaKe_OuT_LoAn(Loan lOaN) {
-		if (!cUrReNt_lOaNs.containsKey(lOaN.GeT_Id())) 
-			cUrReNt_lOaNs.put(lOaN.GeT_Id(), lOaN);
+	//public void TaKe_OuT_LoAn(Loan lOaN) {
+	public void takeOutLoan(Loan loan) {
+		
+		//if (!cUrReNt_lOaNs.containsKey(lOaN.GeT_Id())) 
+		if (!currentLoans.containsKey(loan.getId())) 	//cUrReNt_lOaNs to currentLoans , lOaN.GeT_Id to loan.getId - Author
+			currentLoans.put(loan.getId(), loan); 	//cUrReNt_lOaNs to currentLoans , lOaN.GeT_Id to loan.getId - Author
 		
 		else 
 			throw new RuntimeException("Duplicate loan added to member");
