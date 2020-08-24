@@ -8,7 +8,7 @@ public class PayFineControl {                          // pAY_fINE_cONTROL
 	private enum ControlState                     //cOnTrOl_sTaTe
 	private ControlState state;                  // cOnTrOl_sTaTe StAtE
 	
-	private Librarylibrary;                     //LiBrArY
+	private Library library;                     //LiBrArY
 	private Member member;                      //MeMbEr
 
 
@@ -18,11 +18,11 @@ public class PayFineControl {                          // pAY_fINE_cONTROL
 	}
 	
 	
-	public void setUI(PayFineUI Ui) {               //public void SeT_uI(PayFineUI uI)
+	public void setUI(PayFineUi ui) {               //public void SeT_uI(PayFineUI uI)
 		if (!state.equals(ControlState.INITIALISED)) {     //(!StAtE.equals(cOnTrOl_sTaTe.INITIALISED))
 			throw new RuntimeException("PayFineControl: cannot call setUI except in INITIALISED state");
 		}	
-		this.Ui = Ui;                //uI
+		this.Ui = ui;                //uI
 		Ui.setState(PayFineUI.UiState.READY);     //uI.SeT_StAtE(PayFineUI.uI_sTaTe.READY)
 		state= ControlState.READY;	           //StAtE = cOnTrOl_sTaTe.READY	
 	}
