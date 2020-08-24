@@ -77,10 +77,13 @@ public class FixBookUI {
 				String ans = input("Fix Book? (Y/N) : ");	
 				//boolean FiX = false;
 				boolean fix = false;
-				if (AnS.toUpperCase().equals("Y")) 
-					FiX = true;
+				//if (AnS.toUpperCase().equals("Y"))
+				if (ans.toUpperCase().equals("Y"))
+					//FiX = true;
+					fix = true;				//FiX changed to fix
 				
-				CoNtRoL.FiX_BoOk(FiX);
+				//CoNtRoL.FiX_BoOk(FiX);
+				control.fixBook(fix);				//CoNtRoL.FiX_BoOk(FiX); changed to control.fixBook(fix);
 				break;
 								
 			case COMPLETED:
