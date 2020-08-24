@@ -17,8 +17,10 @@ public class FixBookUI {
 	
 	//public FixBookUI(fIX_bOOK_cONTROL CoNtRoL) 
 	public FixBookUI(fixBookControl control) {
-		this.CoNtRoL = CoNtRoL;
-		InPuT = new Scanner(System.in);
+		//this.CoNtRoL = CoNtRoL;					//CoNtRoL changed to control
+		this.control = control;
+		//InPuT = new Scanner(System.in);
+		input = new Scanner(System.in);					//InPuT changed to input
 		StAtE = uI_sTaTe.INITIALISED;
 		CoNtRoL.SeT_Ui(this);
 	}
