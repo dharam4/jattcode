@@ -77,9 +77,9 @@ public class ReturnBookUI {
 					boolean isDamage = false;
 							  
 				//if (AnS.toUpperCase().equals("Y")) 
-					if (ans.toUpperCase(). equals("Y"))
+					if (ans.toUpperCase().equals("Y"))
 					//Is_dAmagEd = true;
-					isDamage - true;
+					isDamage = true;
 				
 				//CoNtRoL.dIsChArGe_lOaN(Is_DAmAgEd);
 				control.dischargeLoan(isDamage);
