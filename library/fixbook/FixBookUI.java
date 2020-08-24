@@ -24,12 +24,15 @@ public class FixBookUI {
 		//StAtE = uI_sTaTe.INITIALISED;
 		state = UiState.INITIALISED;					//StAtE = uI_sTaTe.INITIALISED; changed to state = UiState.INITIALISED;	
 		//CoNtRoL.SeT_Ui(this);
-		control.setUi(this);						////CoNtRoL.SeT_Ui(this); changed to control.setUi(this);
+		control.setUi(this);						//CoNtRoL.SeT_Ui(this); changed to control.setUi(this);
 	}
 
 
-	public void SeT_StAtE(uI_sTaTe state) {
-		this.StAtE = state;
+	//public void SeT_StAtE(uI_sTaTe state)
+	public void setState(UiState state) {					//SeT_StAtE(uI_sTaTe state) changed to setState(UiState state) 
+		//this.StAtE = state;
+		this.state = state;						//StAtE changed to state
+
 	}
 
 	
