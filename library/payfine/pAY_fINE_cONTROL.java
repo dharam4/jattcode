@@ -2,29 +2,29 @@ package library.payfine;
 import library.entities.Library;
 import library.entities.Member;
 
-public class pAY_fINE_cONTROL {
+public class PayFineControl {                          // pAY_fINE_cONTROL
 	
-	private PayFineUI Ui;
-	private enum cOnTrOl_sTaTe { INITIALISED, READY, PAYING, COMPLETED, CANCELLED };
-	private cOnTrOl_sTaTe StAtE;
+	private PayFineUi ui;
+	private enum ControlState                     //cOnTrOl_sTaTe
+	private ControlState state;                  // cOnTrOl_sTaTe StAtE
 	
-	private Library LiBrArY;
-	private Member MeMbEr;
+	private Library library;                     //LiBrArY
+	private Member member;                      //MeMbEr
 
 
-	public pAY_fINE_cONTROL() {
-		this.LiBrArY = Library.GeTiNsTaNcE();
-		StAtE = cOnTrOl_sTaTe.INITIALISED;
+	public PayFineControl() {                          //pAY_fINE_cONTROL()
+		this.Library = Library.getInstance();     //this.LiBrArY = Library.GeTiNsTaNcE()      
+		state = ControlState.INITIALISED;        //StAtE = cOnTrOl_sTaTe.INITIALISED
 	}
 	
 	
-	public void SeT_uI(PayFineUI uI) {
-		if (!StAtE.equals(cOnTrOl_sTaTe.INITIALISED)) {
+	public void setUI(PayFineUi ui) {               //public void SeT_uI(PayFineUI uI)
+		if (!state.equals(ControlState.INITIALISED)) {     //(!StAtE.equals(cOnTrOl_sTaTe.INITIALISED))
 			throw new RuntimeException("PayFineControl: cannot call setUI except in INITIALISED state");
 		}	
-		this.Ui = uI;
-		uI.SeT_StAtE(PayFineUI.uI_sTaTe.READY);
-		StAtE = cOnTrOl_sTaTe.READY;		
+		this.ui = ui;                //uI
+		ui.setState(PayFineUi.uiState.READY);     //uI.SeT_StAtE(PayFineUI.uI_sTaTe.READY)
+		state = ControlState.READY;	           //StAtE = cOnTrOl_sTaTe.READY	
 	}
 
 
