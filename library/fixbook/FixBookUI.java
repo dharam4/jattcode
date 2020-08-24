@@ -1,3 +1,7 @@
+//Author :  Ankush Kumar
+//Reviewer : Navjevan Kaur
+//Mediator : Dharamveer Singh
+
 package library.fixbook;
 import java.util.Scanner;
 
@@ -56,8 +60,10 @@ public class FixBookUI {
 				
 				else {
 					try {
-						int BoOk_Id = Integer.valueOf(BoOk_EnTrY_StRiNg).intValue();
-						CoNtRoL.BoOk_ScAnNeD(BoOk_Id);
+						//int BoOk_Id = Integer.valueOf(BoOk_EnTrY_StRiNg).intValue();
+						int bookId = Integer.valueOf(bookEntryString).intValue();
+						//CoNtRoL.BoOk_ScAnNeD(BoOk_Id);
+						control.bookScanned(bookId);		//CoNtRoL.BoOk_ScAnNeD(BoOk_Id); changed to control.bookScanned(bookId)
 					}
 					catch (NumberFormatException e) {
 						OuTpUt("Invalid bookId");
