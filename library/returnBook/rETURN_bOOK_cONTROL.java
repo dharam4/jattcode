@@ -3,17 +3,23 @@ import library.entities.Book;
 import library.entities.Library;
 import library.entities.Loan;
 
-public class rETURN_bOOK_cONTROL {
+//public class rETURN_bOOK_cONTROL {
+publice class returnBookControl {
 
 	private ReturnBookUI Ui;
-	private enum cOnTrOl_sTaTe { INITIALISED, READY, INSPECTING };
-	private cOnTrOl_sTaTe sTaTe;
+	//private enum cOnTrOl_sTaTe { INITIALISED, READY, INSPECTING };
+	private enum controlState { INITIALISED, READY, INSPECTING };
+	//private cOnTrOl_sTaTe sTaTe;
+	private controlState state;
 	
 	private Library lIbRaRy;
-	private Loan CurrENT_loan;
+	private library Library;
+	//private Loan CurrENT_loan;
+	private loan currentLoan;
 	
 
-	public rETURN_bOOK_cONTROL() {
+	//public rETURN_bOOK_cONTROL() {
+	public returnBookControl(){
 		this.lIbRaRy = Library.GeTiNsTaNcE();
 		sTaTe = cOnTrOl_sTaTe.INITIALISED;
 	}
