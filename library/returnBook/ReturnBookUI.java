@@ -48,11 +48,11 @@ public class ReturnBookUI {
 				
 			case READY:
 				//String BoOk_InPuT_StRiNg = iNpUt("Scan Book (<enter> completes): ");
-				String BookInputString = input("Scan book (<enter> completes): ");
+				String bookInputString = input("Scan book (<enter> completes): ");
 				//if (BoOk_InPuT_StRiNg.length() == 0) 
-					if (bookInputString.Length() ==0)
+					if (bookInputString.length() ==0)
 					//CoNtRoL.sCaNnInG_cOmPlEtE();
-					Control. ScanningComplete();
+					control.scanningComplete();
 
 				
 				else {
@@ -61,7 +61,7 @@ public class ReturnBookUI {
 						int bookId = Integer.valueOf(bookInputString).intValue();
 						 
 						//CoNtRoL.bOoK_sCaNnEd(Book_Id);
-						Control.bookScanned(bookId);
+						control.bookScanned(bookId);
 					}
 					catch (NumberFormatException e) {
 						//oUtPuT("Invalid bookId");
@@ -72,7 +72,7 @@ public class ReturnBookUI {
 				
 			case INSPECTING:
 				//String AnS = iNpUt("Is book damaged? (Y/N): ");
-					String ans= input(Is book damage? (Y/N):");
+					String ans = input("Is book damage? (Y/N):");
 				//boolean Is_DAmAgEd = false;
 					boolean isDamage = false;
 							  
@@ -82,7 +82,7 @@ public class ReturnBookUI {
 					isDamage - true;
 				
 				//CoNtRoL.dIsChArGe_lOaN(Is_DAmAgEd);
-				Control.dischargeLoan(isdamage);
+				control.dischargeLoan(isDamage);
 			
 			case COMPLETED:
 				//oUtPuT("Return processing complete");
