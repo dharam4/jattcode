@@ -87,12 +87,15 @@ public class FixBookUI {
 				break;
 								
 			case COMPLETED:
-				OuTpUt("Fixing process complete");
+				//OuTpUt("Fixing process complete");
+				output("Fixing process complete");
 				return;
 			
 			default:
-				OuTpUt("Unhandled state");
-				throw new RuntimeException("FixBookUI : unhandled state :" + StAtE);			
+				//OuTpUt("Unhandled state");
+				output("Unhandled state");
+				//throw new RuntimeException("FixBookUI : unhandled state :" + StAtE);	
+				throw new RuntimeException("FixBookUI : unhandled state :" + state);	
 			
 			}		
 		}
