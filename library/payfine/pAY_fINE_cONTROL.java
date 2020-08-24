@@ -24,7 +24,7 @@ public class PayFineControl {                          // pAY_fINE_cONTROL
 		}	
 		this.ui = ui;                //uI
 		ui.setState(PayFineUi.uiState.READY);     //uI.SeT_StAtE(PayFineUI.uI_sTaTe.READY)
-		state= ControlState.READY;	           //StAtE = cOnTrOl_sTaTe.READY	
+		state = ControlState.READY;	           //StAtE = cOnTrOl_sTaTe.READY	
 	}
 
 
