@@ -4,7 +4,7 @@ import library.entities.Member;
 
 public class PayFineControl {                          // pAY_fINE_cONTROL
 	
-	private PayFineUI Ui;
+	private PayFineUi ui;
 	private enum ControlState                     //cOnTrOl_sTaTe
 	private ControlState state;                  // cOnTrOl_sTaTe StAtE
 	
