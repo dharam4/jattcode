@@ -66,14 +66,17 @@ public class FixBookUI {
 						control.bookScanned(bookId);		//CoNtRoL.BoOk_ScAnNeD(BoOk_Id); changed to control.bookScanned(bookId)
 					}
 					catch (NumberFormatException e) {
-						OuTpUt("Invalid bookId");
+						//OuTpUt("Invalid bookId");
+						output("Invalid bookId");		//OuTpUt changed to output
 					}
 				}
 				break;	
 				
 			case FIXING:
-				String AnS = iNpUt("Fix Book? (Y/N) : ");
-				boolean FiX = false;
+				//String AnS = iNpUt("Fix Book? (Y/N) : ");
+				String ans = input("Fix Book? (Y/N) : ");	
+				//boolean FiX = false;
+				boolean fix = false;
 				if (AnS.toUpperCase().equals("Y")) 
 					FiX = true;
 				
