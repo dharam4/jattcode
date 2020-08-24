@@ -43,12 +43,16 @@ public class FixBookUI {
 		
 		while (true) {
 			
-			switch (StAtE) {
+			//switch (StAtE) 
+			switch (state) {					//(StAtE) changed to state 
 			
 			case READY:
-				String BoOk_EnTrY_StRiNg = iNpUt("Scan Book (<enter> completes): ");
-				if (BoOk_EnTrY_StRiNg.length() == 0) 
-					CoNtRoL.SCannING_COMplete();
+				//String BoOk_EnTrY_StRiNg = iNpUt("Scan Book (<enter> completes): ");
+				String bookEntryString = input("Scan Book (<enter> completes): "); 		//BoOk_EnTrY_StRiNg = iNpUt changed to booEntryString = input
+				//if (BoOk_EnTrY_StRiNg.length() == 0)
+				if (bookEntryString.length() == 0)			//if (BoOk_EnTrY_StRiNg.length() == 0) changed to if (bookEntryString.length() == 0)
+					//CoNtRoL.SCannING_COMplete();
+					control.scanningComplete();			//CoNtRoL.SCannING_COMplete(); changed to 
 				
 				else {
 					try {
