@@ -118,18 +118,24 @@ public class Member implements Serializable {
 	}
 
 	
-	public String GeT_LaSt_NaMe() {
-		return LaSt_NaMe;
+	//public String GeT_LaSt_NaMe() {
+	public String getLastName() {	//GeT_LaSt_NaMe to getLastName - Author
+		//return LaSt_NaMe;
+		return lastName;		//LaSt_NaMe to lastName -Author
 	}
 
 	
-	public String GeT_FiRsT_NaMe() {
-		return FiRsT_NaMe;
+	//public String GeT_FiRsT_NaMe() {
+	public String getFirstName() { //GeT_FiRsT_NaMe to getFirstName
+		//return FiRsT_NaMe;
+		return firstName;	//FiRsT_NaMe to firstName
 	}
 
 
-	public void AdD_FiNe(double fine) {
-		FiNeS_OwInG += fine;
+	//public void AdD_FiNe(double fine) {
+	public void addFine(double fine) {	// AdD_FiNe to addFine
+		//FiNeS_OwInG += fine;
+		fineOwing += fine; 	// FiNeS_OwInG to fineOwing
 	}
 	
 	public double PaY_FiNe(double AmOuNt) {
