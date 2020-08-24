@@ -106,17 +106,19 @@ public class FixBookUI {
 	//private String iNpUt(String prompt)
 	private String input(String prompt) {
 		System.out.print(prompt);
-		//return InPuT.nextLine();
+		//return InPuT.nextLine();				//return InPuT.nextLine(); changed to return input.nextLine();
 		return input.nextLine();
 	}	
 		
 		
-	private void OuTpUt(Object object) {
+	//private void OuTpUt(Object object) 
+	private void output(Object object) {
 		System.out.println(object);
 	}
 	
 
-	public void dIsPlAy(Object object) {
+	//public void dIsPlAy(Object object) 
+	public void display(Object object) {
 		OuTpUt(object);
 	}
 	
