@@ -68,9 +68,12 @@ public class fixBookControl {					//fIX_bOOK_cONTROL changed to fixBookControl
 			ui.display("Book has not been damaged");
 			return;
 		}
-		Ui.dIsPlAy(CuRrEnT_BoOk.toString());
-		Ui.SeT_StAtE(FixBookUI.uI_sTaTe.FIXING);
-		StAtE = CoNtRoL_StAtE.FIXING;		
+		//Ui.dIsPlAy(CuRrEnT_BoOk.toString());
+		ui.display(currentBook.toString());			//Ui.dIsPlAy(CuRrEnT_BoOk.toString()); changed to ui.display(currentBook.toString());
+		//Ui.SeT_StAtE(FixBookUI.uI_sTaTe.FIXING);
+		ui.setState(FixBookUi.uiState.FIXING);		
+		//StAtE = CoNtRoL_StAtE.FIXING;
+		state = ControlState.FIXING;
 	}
 
 
