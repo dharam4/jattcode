@@ -63,9 +63,13 @@ public class PayFineControl {                          // pAY_fINE_cONTROL
 		if (!state.equals(ControlState.PAYING))      //if (!StAtE.equals(cOnTrOl_sTaTe.PAYING))
 			throw new RuntimeException("PayFineControl: cannot call payFine except in PAYING state");
 			
-		double ChAnGe = MeMbEr.PaY_FiNe(AmOuNt);
+		/*double ChAnGe = MeMbEr.PaY_FiNe(AmOuNt);
 		if (ChAnGe > 0) 
-			Ui.DiSplAY(String.format("Change: $%.2f", ChAnGe));
+			Ui.DiSplAY(String.format("Change: $%.2f", ChAnGe));*/
+			
+		double change = member.payFine(amount);
+		if (change > 0) 
+			ui.display(String.format("Change: $%.2f", change));
 		
 		Ui.DiSplAY(MeMbEr.toString());
 		Ui.SeT_StAtE(PayFineUI.uI_sTaTe.COMPLETED);
