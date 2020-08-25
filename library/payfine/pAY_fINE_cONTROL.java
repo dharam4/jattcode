@@ -78,8 +78,8 @@ public class PayFineControl {                          // pAY_fINE_cONTROL
 		
 		ui.display(member.toString());
 		ui.setState(PayFineUi.uiState.COMPLETED);
-		StAtE = cOnTrOl_sTaTe.COMPLETED;
-		return ChAnGe;
+		state = ControlState.COMPLETED;
+		return change;
 	}
 	
 
