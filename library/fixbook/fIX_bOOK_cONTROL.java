@@ -43,15 +43,18 @@ public class fixBookControl {					//fIX_bOOK_cONTROL changed to fixBookControl
 		//ui.SeT_StAtE(FixBookUI.uI_sTaTe.READY);
 		ui.setState(FixBookUI.uiState.READY);
 		//StAtE = CoNtRoL_StAtE.READY;
-		state = ControlState.READY;
+		state = ControlState.READY;				//StAtE = CoNtRoL_StAtE.READY; changed to state = ControlState.READY;
 	}
 
 
-	public void BoOk_ScAnNeD(int BoOkId) {
-		if (!StAtE.equals(CoNtRoL_StAtE.READY)) 
+	//public void BoOk_ScAnNeD(int BoOkId) 
+	public void bookScanned(int bookId) {
+		//if (!StAtE.equals(CoNtRoL_StAtE.READY))
+		if (!state.equals(ControlState.READY))
 			throw new RuntimeException("FixBookControl: cannot call bookScanned except in READY state");
 			
-		CuRrEnT_BoOk = LiBrArY.gEt_BoOk(BoOkId);
+		//CuRrEnT_BoOk = LiBrArY.gEt_BoOk(BoOkId);
+		currentBook = library.getBook(bookId);			//CuRrEnT_BoOk = LiBrArY.gEt_BoOk(BoOkId); changed to currentBook = library.getBook(bookId);
 		
 		if (CuRrEnT_BoOk == null) {
 			Ui.dIsPlAy("Invalid bookId");
