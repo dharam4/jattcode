@@ -60,7 +60,7 @@ public class PayFineControl {                          // pAY_fINE_cONTROL
 
 
 	public double payFine(double amount) {               //public double PaY_FiNe(double AmOuNt)
-		if (!StAtE.equals(cOnTrOl_sTaTe.PAYING)) 
+		if (!state.equals(ControlState.PAYING))      //if (!StAtE.equals(cOnTrOl_sTaTe.PAYING))
 			throw new RuntimeException("PayFineControl: cannot call payFine except in PAYING state");
 			
 		double ChAnGe = MeMbEr.PaY_FiNe(AmOuNt);
