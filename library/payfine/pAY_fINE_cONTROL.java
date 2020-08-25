@@ -59,7 +59,7 @@ public class PayFineControl {                          // pAY_fINE_cONTROL
 	}
 
 
-	public double PaY_FiNe(double AmOuNt) {
+	public double payFine(double amount) {               //public double PaY_FiNe(double AmOuNt)
 		if (!StAtE.equals(cOnTrOl_sTaTe.PAYING)) 
 			throw new RuntimeException("PayFineControl: cannot call payFine except in PAYING state");
 			
