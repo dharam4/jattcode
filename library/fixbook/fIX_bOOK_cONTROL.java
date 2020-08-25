@@ -56,12 +56,16 @@ public class fixBookControl {					//fIX_bOOK_cONTROL changed to fixBookControl
 		//CuRrEnT_BoOk = LiBrArY.gEt_BoOk(BoOkId);
 		currentBook = library.getBook(bookId);			//CuRrEnT_BoOk = LiBrArY.gEt_BoOk(BoOkId); changed to currentBook = library.getBook(bookId);
 		
-		if (CuRrEnT_BoOk == null) {
-			Ui.dIsPlAy("Invalid bookId");
+		//if (CuRrEnT_BoOk == null) 
+		if (currentBook == null) {
+			//Ui.dIsPlAy("Invalid bookId");
+			ui.display("Invalid bookId");			//Ui.dIsPlAy("Invalid bookId"); changed to ui.display("Invalid bookId");
 			return;
 		}
-		if (!CuRrEnT_BoOk.iS_DaMaGeD()) {
-			Ui.dIsPlAy("Book has not been damaged");
+		//if (!CuRrEnT_BoOk.iS_DaMaGeD()) 
+		if (!currentBook.isDamaged()) {				//if (!CuRrEnT_BoOk.iS_DaMaGeD())  changed to if (!currentBook.isDamaged())
+			//Ui.dIsPlAy("Book has not been damaged");
+			ui.display("Book has not been damaged");
 			return;
 		}
 		Ui.dIsPlAy(CuRrEnT_BoOk.toString());
