@@ -34,12 +34,16 @@ public class fixBookControl {					//fIX_bOOK_cONTROL changed to fixBookControl
 	
 	//public void SeT_Ui(FixBookUI ui) 
 	public void setUi(FixBookUi ui) {			//public void SeT_Ui(FixBookUI ui)  changed to public void setUi(FixBookUi ui
-		if (!StAtE.equals(CoNtRoL_StAtE.INITIALISED)) 
+		//if (!StAtE.equals(CoNtRoL_StAtE.INITIALISED))
+		if (!state.equals(ControlState.INITIALISED))
 			throw new RuntimeException("FixBookControl: cannot call setUI except in INITIALISED state");
 			
-		this.Ui = ui;
-		ui.SeT_StAtE(FixBookUI.uI_sTaTe.READY);
-		StAtE = CoNtRoL_StAtE.READY;		
+		//this.Ui = ui;
+		this.ui = ui;
+		//ui.SeT_StAtE(FixBookUI.uI_sTaTe.READY);
+		ui.setState(FixBookUI.uiState.READY);
+		//StAtE = CoNtRoL_StAtE.READY;
+		state = ControlState.READY;
 	}
 
 
