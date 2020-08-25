@@ -77,7 +77,7 @@ public class PayFineControl {                          // pAY_fINE_cONTROL
 		return ChAnGe;*/
 		
 		ui.display(member.toString());
-		Ui.SeT_StAtE(PayFineUI.uI_sTaTe.COMPLETED);
+		ui.setState(PayFineUi.uiState.COMPLETED);
 		StAtE = cOnTrOl_sTaTe.COMPLETED;
 		return ChAnGe;
 	}
