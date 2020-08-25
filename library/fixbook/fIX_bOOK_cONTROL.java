@@ -77,11 +77,14 @@ public class fixBookControl {					//fIX_bOOK_cONTROL changed to fixBookControl
 	}
 
 
-	public void FiX_BoOk(boolean mUsT_FiX) {
-		if (!StAtE.equals(CoNtRoL_StAtE.FIXING)) 
+	//public void FiX_BoOk(boolean mUsT_FiX) 
+	public void fixBook(boolean mustFix) {				//FiX_BoOk(boolean mUsT_FiX)  changed to fixBook(boolean mustFix)
+		//if (!StAtE.equals(CoNtRoL_StAtE.FIXING))
+		if (!state.equals(ControlState.FIXING))
 			throw new RuntimeException("FixBookControl: cannot call fixBook except in FIXING state");
 			
-		if (mUsT_FiX) 
+		//if (mUsT_FiX)
+		if (mustFix)						//if (mUsT_FiX) changed to mustFix)
 			LiBrArY.RePaIr_BoOk(CuRrEnT_BoOk);
 		
 		CuRrEnT_BoOk = null;
