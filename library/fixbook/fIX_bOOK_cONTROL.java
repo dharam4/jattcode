@@ -1,11 +1,19 @@
+
+//Author : Ankush Kumar
+//Reviewer : Navjeevan Kaur
+//Mediator : Dharamveer Singh
+
 package library.fixbook;
 import library.entities.Book;
 import library.entities.Library;
 
-public class fIX_bOOK_cONTROL {
+//public class fIX_bOOK_cONTROL 
+public class fixBookControl {
 	
-	private FixBookUI Ui;
-	private enum CoNtRoL_StAtE { INITIALISED, READY, FIXING };
+	//private FixBookUI Ui;
+	private FixBookUI ui;
+	//private enum CoNtRoL_StAtE { INITIALISED, READY, FIXING };
+	private enum ControlState { INITIALISED, READY, FIXING };
 	private CoNtRoL_StAtE StAtE;
 	
 	private Library LiBrArY;
