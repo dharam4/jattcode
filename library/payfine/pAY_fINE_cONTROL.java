@@ -34,7 +34,7 @@ public class PayFineControl {                          // pAY_fINE_cONTROL
 			
 		member = library.getMember(memberId);            //MeMbEr = LiBrArY.gEt_MeMbEr(MeMbEr_Id)
 		
-		if (MeMbEr == null) {
+		if (member == null) {                      //MeMbEr 
 			Ui.DiSplAY("Invalid Member Id");
 			return;
 		}
