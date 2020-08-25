@@ -49,8 +49,12 @@ public class PayFineControl {                          // pAY_fINE_cONTROL
 	}
 	
 	
-	public void CaNcEl() {
+	/*public void CaNcEl() {                              
 		Ui.SeT_StAtE(PayFineUI.uI_sTaTe.CANCELLED);
+		StAtE = cOnTrOl_sTaTe.CANCELLED;*/
+		
+		public void cancel() {                              
+		ui.setState(PayFineUi.uiState.CANCELLED);
 		StAtE = cOnTrOl_sTaTe.CANCELLED;
 	}
 
