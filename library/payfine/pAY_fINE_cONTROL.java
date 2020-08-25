@@ -55,7 +55,7 @@ public class PayFineControl {                          // pAY_fINE_cONTROL
 		
 		public void cancel() {                              
 		ui.setState(PayFineUi.uiState.CANCELLED);
-		StAtE = cOnTrOl_sTaTe.CANCELLED;
+		state = ControlState.CANCELLED;
 	}
 
 
