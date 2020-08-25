@@ -23,13 +23,17 @@ public class fixBookControl {					//fIX_bOOK_cONTROL changed to fixBookControl
 	private Book currentBook;				// CuRrEnT_BoOk; changed to currentBook
 
 
-	public fIX_bOOK_cONTROL() {
-		this.LiBrArY = Library.GeTiNsTaNcE();
-		StAtE = CoNtRoL_StAtE.INITIALISED;
+	//public fIX_bOOK_cONTROL() 
+	public fixBookControl() {
+		//this.LiBrArY = Library.GeTiNsTaNcE();
+		this.library = library.getInstance();
+		//StAtE = CoNtRoL_StAtE.INITIALISED;
+		state = ControlState.INITIALISED;
 	}
 	
 	
-	public void SeT_Ui(FixBookUI ui) {
+	//public void SeT_Ui(FixBookUI ui) 
+	public void setUi(FixBookUi ui) {			//public void SeT_Ui(FixBookUI ui)  changed to public void setUi(FixBookUi ui
 		if (!StAtE.equals(CoNtRoL_StAtE.INITIALISED)) 
 			throw new RuntimeException("FixBookControl: cannot call setUI except in INITIALISED state");
 			
