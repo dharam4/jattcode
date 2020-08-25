@@ -71,7 +71,12 @@ public class PayFineControl {                          // pAY_fINE_cONTROL
 		if (change > 0) 
 			ui.display(String.format("Change: $%.2f", change));
 		
-		Ui.DiSplAY(MeMbEr.toString());
+		/*Ui.DiSplAY(MeMbEr.toString());
+		Ui.SeT_StAtE(PayFineUI.uI_sTaTe.COMPLETED);
+		StAtE = cOnTrOl_sTaTe.COMPLETED;
+		return ChAnGe;*/
+		
+		ui.display(member.toString());
 		Ui.SeT_StAtE(PayFineUI.uI_sTaTe.COMPLETED);
 		StAtE = cOnTrOl_sTaTe.COMPLETED;
 		return ChAnGe;
