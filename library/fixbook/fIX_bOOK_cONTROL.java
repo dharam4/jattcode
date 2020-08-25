@@ -85,11 +85,15 @@ public class fixBookControl {					//fIX_bOOK_cONTROL changed to fixBookControl
 			
 		//if (mUsT_FiX)
 		if (mustFix)						//if (mUsT_FiX) changed to mustFix)
-			LiBrArY.RePaIr_BoOk(CuRrEnT_BoOk);
+			//LiBrArY.RePaIr_BoOk(CuRrEnT_BoOk);
+			library.repairBook(currentBook);		//LiBrArY.RePaIr_BoOk(CuRrEnT_BoOk); changed to library.repairBook(currentBook);
 		
-		CuRrEnT_BoOk = null;
-		Ui.SeT_StAtE(FixBookUI.uI_sTaTe.READY);
-		StAtE = CoNtRoL_StAtE.READY;		
+		//CuRrEnT_BoOk = null;
+		currentBook = null;
+		//Ui.SeT_StAtE(FixBookUI.uI_sTaTe.READY);
+		ui.setState(FixBookUi.uiState.READY);
+		//StAtE = CoNtRoL_StAtE.READY;
+		state = ControlState.READY;				//StAtE = CoNtRoL_StAtE.READY; changed to state = ControlState.READY;
 	}
 
 	
