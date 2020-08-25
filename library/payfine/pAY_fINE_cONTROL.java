@@ -38,8 +38,13 @@ public class PayFineControl {                          // pAY_fINE_cONTROL
 			ui.display("Invalid Member Id");        //Ui.DiSplAY
 			return;
 		}
-		Ui.DiSplAY(MeMbEr.toString());
+		
+		/*Ui.DiSplAY(MeMbEr.toString());
 		Ui.SeT_StAtE(PayFineUI.uI_sTaTe.PAYING);
+		StAtE = cOnTrOl_sTaTe.PAYING;*/
+		
+		ui.display(member.toString());
+		ui.setState(PayFineUi.uiState.PAYING);
 		StAtE = cOnTrOl_sTaTe.PAYING;
 	}
 	
