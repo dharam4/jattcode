@@ -45,7 +45,7 @@ public class PayFineControl {                          // pAY_fINE_cONTROL
 		
 		ui.display(member.toString());
 		ui.setState(PayFineUi.uiState.PAYING);
-		StAtE = cOnTrOl_sTaTe.PAYING;
+		state = ControlState.PAYING;
 	}
 	
 	
