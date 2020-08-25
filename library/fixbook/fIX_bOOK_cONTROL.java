@@ -8,16 +8,19 @@ import library.entities.Book;
 import library.entities.Library;
 
 //public class fIX_bOOK_cONTROL 
-public class fixBookControl {
+public class fixBookControl {					//fIX_bOOK_cONTROL changed to fixBookControl
 	
 	//private FixBookUI Ui;
 	private FixBookUI ui;
-	//private enum CoNtRoL_StAtE { INITIALISED, READY, FIXING };
+	//private enum CoNtRoL_StAtE { INITIALISED, READY, FIXING };		//CoNtRoL_StAtE changed to ControlState
 	private enum ControlState { INITIALISED, READY, FIXING };
-	private CoNtRoL_StAtE StAtE;
+	//private CoNtRoL_StAtE StAtE;
+	private ControlState state;
 	
-	private Library LiBrArY;
-	private Book CuRrEnT_BoOk;
+	//private Library LiBrArY;
+	private Library library;
+	//private Book CuRrEnT_BoOk;
+	private Book currentBook;				// CuRrEnT_BoOk; changed to currentBook
 
 
 	public fIX_bOOK_cONTROL() {
