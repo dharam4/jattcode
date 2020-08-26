@@ -257,9 +257,10 @@ public class Main {
 	}
 
 
-	private static void ADD_BOOK() {
+	private static void addBook()             //private static void ADD_BOOK()
+	{
 		
-		String AuThOr = input("Enter author: ");
+		String author = input("Enter author: ");       //String AuThOr = input("Enter author: ");
 		String TiTlE  = input("Enter title: ");
 		String CaLl_NuMbEr = input("Enter call number: ");
 		Book BoOk = LIB.aDd_BoOk(AuThOr, TiTlE, CaLl_NuMbEr);
