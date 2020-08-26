@@ -241,8 +241,10 @@ public class Main {
 		try {
 			int days = Integer.valueOf(input("Enter number of days: ")).intValue();
 			cal.incrementDate(days);                 //CAL.incrementDate(days);
-			/*LIB.cHeCk_CuRrEnT_LoAnS();
-			output(SDF.format(CAL.gEt_DaTe()));*/
+			//LIB.cHeCk_CuRrEnT_LoAnS();
+			lib.checkCurrentLoans();
+			//output(SDF.format(CAL.gEt_DaTe()));
+			output(sdf.format(cal.getDate()));
 			
 			lib.checkCurrentLoans();
 			output(sdf.format(cal.getDate()));
