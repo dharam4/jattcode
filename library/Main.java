@@ -240,7 +240,8 @@ public class Main {
 	}
 
 
-	private static void INCREMENT_DATE() {
+	private static void incrementDate()              //private static void INCREMENT_DATE()
+	{
 		try {
 			int days = Integer.valueOf(input("Enter number of days: ")).intValue();
 			CAL.incrementDate(days);
