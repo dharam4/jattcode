@@ -84,8 +84,8 @@ public class Main {
 		try {			
 			in = new Scanner(System.in);                 //IN = new Scanner(System.in);
 			lib = Library.GeTiNsTaNcE();                 //LIB = Library.GeTiNsTaNcE();
-			CAL = Calendar.gEtInStAnCe();                //CAL = Calendar.gEtInStAnCe();                
-			SDF = new SimpleDateFormat("dd/MM/yyyy");     //SDF = new SimpleDateFormat("dd/MM/yyyy");
+			cal = Calendar.gEtInStAnCe();                //CAL = Calendar.gEtInStAnCe();                
+			sdf = new SimpleDateFormat("dd/MM/yyyy");     //SDF = new SimpleDateFormat("dd/MM/yyyy");
 	
 			for (Member m : LIB.lIsT_MeMbErS()) {
 				output(m);
