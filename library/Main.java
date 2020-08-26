@@ -103,7 +103,7 @@ public class Main {
 			
 			while (!e) {
 				
-				output("\n" + SDF.format(CAL.gEt_DaTe()));
+				output("\n" + sdf.format(cal.getDate()));         //output("\n" + SDF.format(CAL.gEt_DaTe()));
 				String c = input(MENU);
 				
 				switch (c.toUpperCase()) {
