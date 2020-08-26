@@ -109,11 +109,11 @@ public class Main {
 				switch (c.toUpperCase()) {
 				
 				case "M": 
-					ADD_MEMBER();
+					addMember();             //ADD_MEMBER()
 					break;
 					
 				case "LM": 
-					LIST_MEMBERS();
+					listMembers();           //LIST_MEMBERS()
 					break;
 					
 				case "B": 
