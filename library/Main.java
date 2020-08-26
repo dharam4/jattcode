@@ -166,11 +166,11 @@ public class Main {
 	}	
 
 	
-	/*private static void PAY_FINES() {
-		new PayFineUI(new pAY_fINE_cONTROL()).RuN();*/
-		
-		private static void payFines() {
+	//private static void PAY_FINES() {
+	private static void payFines() {
+		//new PayFineUI(new pAY_fINE_cONTROL()).RuN();
 		new PayFineUi(new payFineControl()).run();
+		
 	}
 
 
