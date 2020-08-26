@@ -273,7 +273,8 @@ public class Main {
 	}
 
 	
-	private static void ADD_MEMBER() {
+	private static void addMember()                //private static void ADD_MEMBER()
+	{
 		try {
 			String LaSt_NaMe = input("Enter last name: ");
 			String FiRsT_NaMe  = input("Enter first name: ");
