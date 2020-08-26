@@ -235,8 +235,8 @@ public class Main {
 	/*private static void FIX_BOOKS() {
 		new FixBookUI(new fIX_bOOK_cONTROL()).RuN();*/
 		
-		private static void FIX_BOOKS() {
-		new FixBookUI(new fIX_bOOK_cONTROL()).RuN();
+		private static void fixBooks() {
+		new FixBookUi(new fixBookControl()).run();
 	}
 
 
