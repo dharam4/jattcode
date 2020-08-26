@@ -117,19 +117,19 @@ public class Main {
 					break;
 					
 				case "B": 
-					ADD_BOOK();
+					ADD_BOOK();             //ADD_BOOK();
 					break;
 					
 				case "LB": 
-					LIST_BOOKS();
+					listBooks();           //LIST_BOOKS()
 					break;
 					
 				case "FB": 
-					FIX_BOOKS();
+					fixBooks();            //FIX_BOOKS()
 					break;
 					
 				case "L": 
-					BORROW_BOOK();
+					borrowBook();         //BORROW_BOOK()
 					break;
 					
 				case "R": 
