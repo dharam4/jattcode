@@ -87,7 +87,8 @@ public class Main {
 			cal = Calendar.gEtInStAnCe();                //CAL = Calendar.gEtInStAnCe();                
 			sdf = new SimpleDateFormat("dd/MM/yyyy");     //SDF = new SimpleDateFormat("dd/MM/yyyy");
 	
-			for (Member m : LIB.lIsT_MeMbErS()) {
+			for (Member m : lib.listMembers())            //for (Member m : LIB.lIsT_MeMbErS())
+			{
 				output(m);
 			}
 			output(" ");
