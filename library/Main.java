@@ -283,9 +283,14 @@ public class Main {
 			String lastName = input("Enter last name: ");
 			String firstName  = input("Enter first name: ");
 			String emailAddress = input("Enter email address: ");
-			int PhOnE_NuMbEr = Integer.valueOf(input("Enter phone number: ")).intValue();
+			
+			/*int PhOnE_NuMbEr = Integer.valueOf(input("Enter phone number: ")).intValue();
 			Member MeMbEr = LIB.aDd_MeMbEr(LaSt_NaMe, FiRsT_NaMe, EmAiL_AdDrEsS, PhOnE_NuMbEr);
-			output("\n" + MeMbEr + "\n");
+			output("\n" + MeMbEr + "\n");*/
+			
+			int phoneNumber = Integer.valueOf(input("Enter phone number: ")).intValue();
+			Member member = lib.addNumber(lastName, firstName, emailAddress, phoneNumber);
+			output("\n" + member + "\n");
 			
 		} catch (NumberFormatException e) {
 			 output("\nInvalid phone number\n");
