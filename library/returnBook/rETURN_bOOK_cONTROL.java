@@ -62,17 +62,27 @@ publice class returnBookControl {
 			ui.display("Book has not been borrowed");
 			return;
 		}		
-		CurrENT_loan = lIbRaRy.GeT_LoAn_By_BoOkId(bOoK_iD);	
-		double Over_Due_Fine = 0.0;
-		if (CurrENT_loan.Is_OvEr_DuE()) 
-			Over_Due_Fine = lIbRaRy.CaLcUlAtE_OvEr_DuE_FiNe(CurrENT_loan);
+		//CurrENT_loan = lIbRaRy.GeT_LoAn_By_BoOkId(bOoK_iD);	
+		currentLoan = library.getLoanbuBookId(boonId);
+		//double Over_Due_Fine = 0.0;
+		double overdueFine = 0.0;
+		//if (CurrENT_loan.Is_OvEr_DuE()) 
+		if (currentLoan.isOverdue())
+			//Over_Due_Fine = lIbRaRy.CaLcUlAtE_OvEr_DuE_FiNe(CurrENT_loan);
+			overdueFine = library.calculateOverdueFine(currentLoan);
 		
-		Ui.DiSpLaY("Inspecting");
-		Ui.DiSpLaY(cUrReNt_bOoK.toString());
-		Ui.DiSpLaY(CurrENT_loan.toString());
+		//Ui.DiSpLaY("Inspecting");
+		ui.display("Inspecting");
+		//Ui.DiSpLaY(cUrReNt_bOoK.toString());
+		ui.display(currentBook.toString());
+		//Ui.DiSpLaY(CurrENT_loan.toString());
+		ui.display(currentLoan.toString());
 		
-		if (CurrENT_loan.Is_OvEr_DuE()) 
-			Ui.DiSpLaY(String.format("\nOverdue fine : $%.2f", Over_Due_Fine));
+		
+		//if (CurrENT_loan.Is_OvEr_DuE()) 
+		if (currentLoan.isOverdue());
+			//Ui.DiSpLaY(String.format("\nOverdue fine : $%.2f", Over_Due_Fine));
+		         ui.display(String.format("\nOverdue fine : $%.2f", overdueFine));
 		
 		Ui.sEt_sTaTe(ReturnBookUI.uI_sTaTe.INSPECTING);
 		sTaTe = cOnTrOl_sTaTe.INSPECTING;		
