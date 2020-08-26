@@ -28,9 +28,9 @@ public class Main {
 	
 	private static Scanner in;                //private static Scanner IN
 	private static Library lib;               //private static Library LIB
-	private static String MENU;               //private static String MENU
-	private static Calendar CAL;              //private static Calendar CAL
-	private static SimpleDateFormat SDF;      //private static SimpleDateFormat SDF
+	private static String menu;               //private static String MENU
+	private static Calendar cal;              //private static Calendar CAL
+	private static SimpleDateFormat sdf;      //private static SimpleDateFormat SDF
 	
 	
 	private static String Get_menu() {
