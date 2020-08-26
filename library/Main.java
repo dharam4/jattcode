@@ -246,8 +246,6 @@ public class Main {
 			//output(SDF.format(CAL.gEt_DaTe()));
 			output(sdf.format(cal.getDate()));
 			
-			lib.checkCurrentLoans();
-			output(sdf.format(cal.getDate()));
 			
 		} catch (NumberFormatException e) {
 			 output("\nInvalid number of days\n");
@@ -259,12 +257,13 @@ public class Main {
 	{
 		
 		String author = input("Enter author: ");       //String AuThOr = input("Enter author: ");
-		/*String TiTlE  = input("Enter title: ");
-		String CaLl_NuMbEr = input("Enter call number: ");
-		Book BoOk = LIB.aDd_BoOk(AuThOr, TiTlE, CaLl_NuMbEr);*/
+		//String TiTlE  = input("Enter title: ");
 		String title  = input("Enter title: ");
+		//String CaLl_NuMbEr = input("Enter call number: ");
 		String callNumber = input("Enter call number: ");
+		//Book BoOk = LIB.aDd_BoOk(AuThOr, TiTlE, CaLl_NuMbEr);
 		Book book = lib.addBook(author, title, callNumber);
+		
 		output("\n" + book + "\n");                          //output("\n" + BoOk + "\n");
 		
 		
