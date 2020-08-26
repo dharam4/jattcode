@@ -301,7 +301,7 @@ public class Main {
 
 	private static String input(String prompt) {
 		System.out.print(prompt);
-		return IN.nextLine();
+		return in.nextLine();                          //return IN.nextLine();
 	}
 	
 	
