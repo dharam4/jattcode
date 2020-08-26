@@ -224,13 +224,19 @@ public class Main {
 	}
 
 
-	private static void RETURN_BOOK() {
-		new ReturnBookUI(new rETURN_bOOK_cONTROL()).RuN();		
+	/*private static void RETURN_BOOK() {
+		new ReturnBookUI(new rETURN_bOOK_cONTROL()).RuN();*/	
+		
+		private static void returnBook() {
+		new ReturnBookUi(new returnBookControl()).run();	
 	}
 
 
-	private static void FIX_BOOKS() {
-		new FixBookUI(new fIX_bOOK_cONTROL()).RuN();		
+	/*private static void FIX_BOOKS() {
+		new FixBookUI(new fIX_bOOK_cONTROL()).RuN();*/
+		
+		private static void FIX_BOOKS() {
+		new FixBookUI(new fIX_bOOK_cONTROL()).RuN();
 	}
 
 
