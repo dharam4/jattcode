@@ -133,19 +133,19 @@ public class Main {
 					break;
 					
 				case "R": 
-					RETURN_BOOK();
+					returnBook();         //RETURN_BOOK()
 					break;
 					
 				case "LL": 
-					LIST_CURRENT_LOANS();
+					listCurrentLoans();      //LIST_CURRENT_LOANS()
 					break;
 					
 				case "P": 
-					PAY_FINES();
+					payFines();              //PAY_FINES()
 					break;
 					
 				case "T": 
-					INCREMENT_DATE();
+					incrementDate();         //INCREMENT_DATE()
 					break;
 					
 				case "Q": 
