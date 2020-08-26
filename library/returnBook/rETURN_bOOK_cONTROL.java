@@ -31,26 +31,35 @@ publice class returnBookControl {
 	public void setUI(ReturnBookUI UI) {
 		//if (!sTaTe.equals(cOnTrOl_sTaTe.INITIALISED)) 
 		if (!state.equals(controlState.INITIALISED)) 
-			throw new RuntimeException("ReturnBookControl: cannot call setUI except in INITIALISED state");
-		
+			//throw new RuntimeException("ReturnBookControl: cannot call setUI except in INITIALISED state");
+			throw new runtimeException("ReturnBookControl: cannot call setUI expect in INITIALISED state");
 		this.Ui = uI;
-		uI.sEt_sTaTe(ReturnBookUI.uI_sTaTe.READY);
-		sTaTe = cOnTrOl_sTaTe.READY;		
+		//uI.sEt_sTaTe(ReturnBookUI.uI_sTaTe.READY);
+		UI.setState(ReturnBookUI.uiState.READY);
+		//sTaTe = cOnTrOl_sTaTe.READY;
+		state = ControlState.READY;
 	}
 
 
-	public void bOoK_sCaNnEd(int bOoK_iD) {
-		if (!sTaTe.equals(cOnTrOl_sTaTe.READY)) 
+	//public void bOoK_sCaNnEd(int bOoK_iD) {
+	public void booksScanned(int bookId) {
+		//if (!sTaTe.equals(cOnTrOl_sTaTe.READY))
+	         if (!state.equals(ControlState.READY))
 			throw new RuntimeException("ReturnBookControl: cannot call bookScanned except in READY state");
+			 
+		//Book cUrReNt_bOoK = lIbRaRy.gEt_BoOk(bOoK_iD);
+		currentBook = library.getBook(bookId);	
 		
-		Book cUrReNt_bOoK = lIbRaRy.gEt_BoOk(bOoK_iD);
-		
-		if (cUrReNt_bOoK == null) {
-			Ui.DiSpLaY("Invalid Book Id");
+		//if (cUrReNt_bOoK == null) {
+		if (currentBook == null) {
+			//Ui.DiSpLaY("Invalid Book Id");
+			ui.display("Invalid bookId");
 			return;
 		}
-		if (!cUrReNt_bOoK.iS_On_LoAn()) {
-			Ui.DiSpLaY("Book has not been borrowed");
+		//if (!cUrReNt_bOoK.iS_On_LoAn()) {
+		if (!currentBook. isOnLoan()) {
+			//Ui.DiSpLaY("Book has not been borrowed");
+			ui.display("Book has not been borrowed");
 			return;
 		}		
 		CurrENT_loan = lIbRaRy.GeT_LoAn_By_BoOkId(bOoK_iD);	
