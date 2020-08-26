@@ -273,13 +273,13 @@ public class Main {
 	private static void addMember()                //private static void ADD_MEMBER()
 	{
 		try {
-			/*String LaSt_NaMe = input("Enter last name: ");
-			String FiRsT_NaMe  = input("Enter first name: ");
-			String EmAiL_AdDrEsS = input("Enter email address: ");*/
-			
+			//String LaSt_NaMe = input("Enter last name: ");
 			String lastName = input("Enter last name: ");
+			//String FiRsT_NaMe  = input("Enter first name: ");
 			String firstName  = input("Enter first name: ");
+			//String EmAiL_AdDrEsS = input("Enter email address: ");
 			String emailAddress = input("Enter email address: ");
+			
 			
 			/*int PhOnE_NuMbEr = Integer.valueOf(input("Enter phone number: ")).intValue();
 			Member MeMbEr = LIB.aDd_MeMbEr(LaSt_NaMe, FiRsT_NaMe, EmAiL_AdDrEsS, PhOnE_NuMbEr);
