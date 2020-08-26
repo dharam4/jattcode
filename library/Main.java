@@ -166,14 +166,22 @@ public class Main {
 	}	
 
 	
-	private static void PAY_FINES() {
-		new PayFineUI(new pAY_fINE_cONTROL()).RuN();		
+	/*private static void PAY_FINES() {
+		new PayFineUI(new pAY_fINE_cONTROL()).RuN();*/
+		
+		private static void payFines() {
+		new PayFineUi(new payFineControl()).run();
 	}
 
 
-	private static void LIST_CURRENT_LOANS() {
+	/*private static void LIST_CURRENT_LOANS() {
 		output("");
 		for (Loan loan : LIB.lISt_CuRrEnT_LoAnS()) {
+			output(loan + "\n");*/
+			
+			private static void listCurrentLoans() {
+		output("");
+		for (Loan loan : lib.listCurrentLoans()) {
 			output(loan + "\n");
 		}		
 	}
