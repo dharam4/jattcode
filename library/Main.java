@@ -174,15 +174,14 @@ public class Main {
 	}
 
 
-	/*private static void LIST_CURRENT_LOANS() {
+	//private static void LIST_CURRENT_LOANS() {
+	private static void listCurrentLoans() {
 		output("");
-		for (Loan loan : LIB.lISt_CuRrEnT_LoAnS()) {
-			output(loan + "\n");*/
-			
-			private static void listCurrentLoans() {
-		output("");
+		//for (Loan loan : LIB.lISt_CuRrEnT_LoAnS()) {
 		for (Loan loan : lib.listCurrentLoans()) {
 			output(loan + "\n");
+			
+			
 		}		
 	}
 
