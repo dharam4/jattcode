@@ -92,11 +92,12 @@ public class Main {
 				output(m);
 			}
 			output(" ");
-			for (Book b : LIB.lIsT_BoOkS()) {
+			for (Book b : lib.listBooks())               //for (Book b : LIB.lIsT_BoOkS())
+			{
 				output(b);
 			}
 						
-			MENU = Get_menu();
+			MENU = getMenu();                            //MENU = Get_menu()
 			
 			boolean e = false;
 			
