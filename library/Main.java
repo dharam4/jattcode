@@ -187,15 +187,14 @@ public class Main {
 
 
 
-	/*private static void LIST_BOOKS() {
+	//private static void LIST_BOOKS() {
+	private static void listBooks() {
 		output("");
-		for (Book book : LIB.lIsT_BoOkS()) {
-			output(book + "\n");*/
-			
-			private static void listBooks() {
-		output("");
+		//for (Book book : LIB.lIsT_BoOkS()) {
 		for (Book book : lib.listBooks()) {
 			output(book + "\n");
+			
+			
 		}		
 	}
 
