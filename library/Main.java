@@ -281,13 +281,13 @@ public class Main {
 			String emailAddress = input("Enter email address: ");
 			
 			
-			/*int PhOnE_NuMbEr = Integer.valueOf(input("Enter phone number: ")).intValue();
-			Member MeMbEr = LIB.aDd_MeMbEr(LaSt_NaMe, FiRsT_NaMe, EmAiL_AdDrEsS, PhOnE_NuMbEr);
-			output("\n" + MeMbEr + "\n");*/
-			
+			//int PhOnE_NuMbEr = Integer.valueOf(input("Enter phone number: ")).intValue();
 			int phoneNumber = Integer.valueOf(input("Enter phone number: ")).intValue();
+			//Member MeMbEr = LIB.aDd_MeMbEr(LaSt_NaMe, FiRsT_NaMe, EmAiL_AdDrEsS, PhOnE_NuMbEr);
 			Member member = lib.addNumber(lastName, firstName, emailAddress, phoneNumber);
+			//output("\n" + MeMbEr + "\n");
 			output("\n" + member + "\n");
+			
 			
 		} catch (NumberFormatException e) {
 			 output("\nInvalid phone number\n");
