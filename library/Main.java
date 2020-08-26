@@ -202,9 +202,14 @@ public class Main {
 
 
 
-	private static void LIST_MEMBERS() {
+	/*private static void LIST_MEMBERS() {
 		output("");
 		for (Member member : LIB.lIsT_MeMbErS()) {
+			output(member + "\n");*/
+			
+			private static void listMembers() {
+		output("");
+		for (Member member : lib.listMembers()) {
 			output(member + "\n");
 		}		
 	}
