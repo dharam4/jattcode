@@ -2,19 +2,26 @@ package library;
 import java.text.SimpleDateFormat;
 import java.util.Scanner;
 
-import library.borrowbook.BorrowBookUI;
-import library.borrowbook.bORROW_bOOK_cONTROL;
+import library.borrowbook.BorrowBookUi;                         //import library.borrowbook.BorrowBookUI
+import library.borrowbook.BorrowBookControl;                  //import library.borrowbook.bORROW_bOOK_cONTROL
 import library.entities.Book;
 import library.entities.Calendar;
 import library.entities.Library;
 import library.entities.Loan;
 import library.entities.Member;
-import library.fixbook.FixBookUI;
-import library.fixbook.fIX_bOOK_cONTROL;
+import library.fixbook.FixBookUi;                            //import library.fixbook.FixBookUI
+/*import library.fixbook.fIX_bOOK_cONTROL;
 import library.payfine.PayFineUI;
 import library.payfine.pAY_fINE_cONTROL;
 import library.returnBook.ReturnBookUI;
-import library.returnBook.rETURN_bOOK_cONTROL;
+import library.returnBook.rETURN_bOOK_cONTROL;*/
+
+import library.fixbook.FixBookControl;
+import library.payfine.PayFineUi;
+import library.payfine.PayFineControl;
+import library.returnBook.ReturnBookUi;
+import library.returnBook.ReturnBookControl;
+
 
 
 public class Main {
@@ -135,7 +142,8 @@ public class Main {
 		output("\nEnded\n");
 	}	
 
-		private static void PAY_FINES() {
+	
+	private static void PAY_FINES() {
 		new PayFineUI(new pAY_fINE_cONTROL()).RuN();		
 	}
 
