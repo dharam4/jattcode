@@ -96,13 +96,16 @@ public class BorrowBookUi {
 
 				
 			case RESTRICTED:
-				iNpUT("Press <any key> to cancel");
-				CoNtRoL.CaNcEl();
+				//iNpUT("Press <any key> to cancel");
+				input("Press <any key> to cancel");
+				//CoNtRoL.CaNcEl();
+				control.cancel();			//CoNtRoL.CaNcEl(); changed to control.cancel();
 				break;
 			
 				
 			case SCANNING:
-				String BoOk_StRiNg_InPuT = iNpUT("Scan Book (<enter> completes): ");
+				//String BoOk_StRiNg_InPuT = iNpUT("Scan Book (<enter> completes): ");
+				String bookStringInput = input("Scan Book (<enter> completes): ");
 				if (BoOk_StRiNg_InPuT.length() == 0) {
 					CoNtRoL.CoMpLeTe();
 					break;
