@@ -1,11 +1,17 @@
+// Author  Dharamveer Singh
+// Mediator Anksuh Kumar
+// Reviewer Dipanshu
+
 package library.entities;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 public class Calendar {
 	
-	private static Calendar sElF;
-	private static java.util.Calendar cAlEnDaR;
+	//private static Calendar sElF;
+	private static Calendar self;  //sElF to self
+	//private static java.util.Calendar cAlEnDaR;
+	private static java.util.Calendar calendar;  //cAlEnDaR to calnedar
 	
 	
 	private Calendar() {
