@@ -213,27 +213,38 @@ public class Library implements Serializable {
 	}
 
 	
-	public Book gEt_BoOk(int bookId) {
-		if (CaTaLoG.containsKey(bookId)) 
-			return CaTaLoG.get(bookId);		
+	//public Book gEt_BoOk(int bookId) {
+	public Book getBook (int bookId) {
+		//if (CaTaLoG.containsKey(bookId)) 
+		if (catalog.containsKey(bookId)) 
+			//return CaTaLoG.get(bookId);		
+			return catalog.get(bookId);		
 		return null;
 	}
 
 	
-	public int gEt_LoAn_LiMiT() {
-		return lOaNlImIt;
+	//public int gEt_LoAn_LiMiT() {
+	public int getLoanLimit() {
+		//return lOaNlImIt;
+		return loanLimit;
 	}
 
 	
-	public boolean cAn_MeMbEr_BoRrOw(Member member) {		
-		if (member.gEt_nUmBeR_Of_CuRrEnT_LoAnS() == lOaNlImIt ) 
+	//public boolean cAn_MeMbEr_BoRrOw(Member member) {		
+	public boolean canMemberBorrow(Member member) {		
+		//if (member.gEt_nUmBeR_Of_CuRrEnT_LoAnS() == lOaNlImIt ) 
+		if (member.getNumberOfLoans() == loanLimit ) 
 			return false;
 				
-		if (member.FiNeS_OwEd() >= maxFinesOwed) 
+		//if (member.FiNeS_OwEd() >= maxFinesOwed) 
+		
+		if (member.fineOwed() >= maxFinesOwed) 
 			return false;
 				
-		for (Loan loan : member.GeT_LoAnS()) 
-			if (loan.Is_OvEr_DuE()) 
+		//for (Loan loan : member.GeT_LoAnS()) 
+		for (Loan loan : member.getLoans()) 
+			//if (loan.Is_OvEr_DuE()) 
+			if (loan.isOverDue()) 
 				return false;
 			
 		return true;
