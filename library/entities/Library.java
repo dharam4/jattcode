@@ -203,9 +203,12 @@ public class Library implements Serializable {
 	}
 
 	
-	public Member gEt_MeMbEr(int memberId) {
-		if (MeMbErS.containsKey(memberId)) 
-			return MeMbErS.get(memberId);
+	//public Member gEt_MeMbEr(int memberId) {
+	public Member getMember(int memberId) {
+		//if (MeMbErS.containsKey(memberId)) 
+		if (members.containsKey(memberId)) 
+			//return MeMbErS.get(memberId);
+			return members.get(memberId);
 		return null;
 	}
 
