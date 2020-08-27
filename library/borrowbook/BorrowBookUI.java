@@ -64,7 +64,7 @@ public class BorrowBookUi {
 		while (true) {
 			
 			//switch (StaTe) 
-			switch (state) {			
+			switch (state) {		////switch (StaTe) changed to state		
 			
 			case CANCELLED:
 				//OuTpUt("Borrowing Cancelled");
@@ -73,9 +73,13 @@ public class BorrowBookUi {
 
 				
 			case READY:
-				String MEM_STR = iNpUT("Swipe member card (press <enter> to cancel): ");
-				if (MEM_STR.length() == 0) {
-					CoNtRoL.CaNcEl();
+				//String MEM_STR = iNpUT("Swipe member card (press <enter> to cancel): ");
+				String memStr = input("Swipe member card (press <enter> to cancel): ");
+
+				//if (MEM_STR.length() == 0) 
+				if (memStr.length() == 0) {		//if (MEM_STR.length() == 0)  changed to if (memStr.length() == 0)
+					//CoNtRoL.CaNcEl();
+					control.cancel();		//CoNtRoL.CaNcEl(); changed to control.cancel();
 					break;
 				}
 				try {
