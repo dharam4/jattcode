@@ -35,7 +35,7 @@ public class Main {
 		StringBuilder sb = new StringBuilder();
 		
 		sb.append("\nLibrary Main Menu\n\n")
-		  /*.append("  M  : add member\n")
+		  .append("  M  : add member\n")
 		  .append("  LM : list members\n")
 		  .append("\n")
 		  .append("  B  : add book\n")
@@ -51,27 +51,8 @@ public class Main {
 		  .append("  T  : increment date\n")
 		  .append("  Q  : quit\n")
 		  .append("\n")
-		  .append("Choice : ");*/
+		  .append("Choice : ");
 		
-		  sb.append("  M  : add member\n")
-		  sb.append("  LM : list members\n")
-		  sb.append("\n")
-		  sb.append("  B  : add book\n")
-		  sb.append("  LB : list books\n")
-		  sb.append("  FB : fix books\n")
-		  sb.append("\n")
-		  sb.append("  L  : take out a loan\n")
-		  sb.append("  R  : return a loan\n")
-		  sb.append("  LL : list loans\n")
-		  sb.append("\n")
-		  sb.append("  P  : pay fine\n")
-		  sb.append("\n")
-		  sb.append("  T  : increment date\n")
-		  sb.append("  Q  : quit\n")
-		  sb.append("\n")
-		  sb.append("Choice : ");
-		
-	
 		  
 		return sb.toString();
 	}
