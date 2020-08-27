@@ -42,26 +42,38 @@ publice class returnBookControl {
 	}
 
 
-	public void bOoK_sCaNnEd(int bOoK_iD) {
-		if (!sTaTe.equals(cOnTrOl_sTaTe.READY)) 
+	//public void bOoK_sCaNnEd(int bOoK_iD) {
+	public void bookScanned(int bookId) {
+		//if (!sTaTe.equals(cOnTrOl_sTaTe.READY)) 
+		if (!state.equals(ControlState.READY))
 			throw new RuntimeException("ReturnBookControl: cannot call bookScanned except in READY state");
 		
-		Book cUrReNt_bOoK = lIbRaRy.gEt_BoOk(bOoK_iD);
+		//Book cUrReNt_bOoK = lIbRaRy.gEt_BoOk(bOoK_iD);
+		book currentBook = library.getBook(bookId);	
 		
-		if (cUrReNt_bOoK == null) {
-			Ui.DiSpLaY("Invalid Book Id");
+		//if (cUrReNt_bOoK == null) {
+		if (currentBook == null) {
+			//Ui.DiSpLaY("Invalid Book Id");
+			ui.display("Invalid bookId");
 			return;
 		}
-		if (!cUrReNt_bOoK.iS_On_LoAn()) {
-			Ui.DiSpLaY("Book has not been borrowed");
+		//if (!cUrReNt_bOoK.iS_On_LoAn()) {
+		if (!currentBook.isOnLoan()) {	
+			//Ui.DiSpLaY("Book has not been borrowed");
+			ui.display("Book has not been borrowed");
 			return;
 		}		
-		CurrENT_loan = lIbRaRy.GeT_LoAn_By_BoOkId(bOoK_iD);	
-		double Over_Due_Fine = 0.0;
-		if (CurrENT_loan.Is_OvEr_DuE()) 
-			Over_Due_Fine = lIbRaRy.CaLcUlAtE_OvEr_DuE_FiNe(CurrENT_loan);
+		//CurrENT_loan = lIbRaRy.GeT_LoAn_By_BoOkId(bOoK_iD);
+		currentLoan = library.getLoanbyBookId(bookId);
+		//double Over_Due_Fine = 0.0;
+		double overdueFine = 0.0;
+		//if (CurrENT_loan.Is_OvEr_DuE())
+		if (currentLoan.isOverdue())
+			//Over_Due_Fine = lIbRaRy.CaLcUlAtE_OvEr_DuE_FiNe(CurrENT_loan);
+			overdueFine = library.calculateOverdueFine(currentLoan);
 		
-		Ui.DiSpLaY("Inspecting");
+		//Ui.DiSpLaY("Inspecting");
+		ui.display("Inspecting");
 		Ui.DiSpLaY(cUrReNt_bOoK.toString());
 		Ui.DiSpLaY(CurrENT_loan.toString());
 		
