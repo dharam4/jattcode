@@ -1,3 +1,9 @@
+// Author Dharamveer singh
+// Mediator Ankush Kumar
+// Reviewer dipanshu kumar
+
+
+
 package library.entities;
 import java.io.Serializable;
 import java.text.SimpleDateFormat;
@@ -6,13 +12,19 @@ import java.util.Date;
 @SuppressWarnings("serial")
 public class Loan implements Serializable {
 	
-	public static enum lOaN_sTaTe { CURRENT, OVER_DUE, DISCHARGED };
+	//public static enum lOaN_sTaTe { CURRENT, OVER_DUE, DISCHARGED };
+	public static enum loanState { CURRENT, OVER_DUE, DISCHARGED };
 	
-	private int LoAn_Id;
-	private Book BoOk;
-	private Member MeMbEr;
-	private Date DaTe;
-	private lOaN_sTaTe StAtE;
+	//private int LoAn_Id;
+	private int loanId;
+	//private Book BoOk;
+	private Book book;
+	//private Member MeMbEr;
+	private Member member;
+	//private Date DaTe;
+	private Date date;
+	//private lOaN_sTaTe StAtE;
+	private LoanState state;
 
 	
 	public Loan(int loanId, Book bOoK, Member mEmBeR, Date DuE_dAtE) {
