@@ -32,12 +32,15 @@ public class Calendar {
 	}
 	
 	public void incrementDate(int days) {
-		cAlEnDaR.add(java.util.Calendar.DATE, days);		
+		//cAlEnDaR.add(java.util.Calendar.DATE, days);
+		calendar.add(java.util.Calendar.DATE, days);		// cAlEnDaR to calendar
 	}
 	
-	public synchronized void SeT_DaTe(Date DaTe) {
+ 	//public synchronized void SeT_DaTe(Date DaTe) {
+	public synchronized void setDate(Date date) { 	// SeT_DaTe to setDate , DaTe to date
 		try {
-			cAlEnDaR.setTime(DaTe);
+			//cAlEnDaR.setTime(DaTe);
+			calendar.setTime(date);
 	        cAlEnDaR.set(java.util.Calendar.HOUR_OF_DAY, 0);  
 	        cAlEnDaR.set(java.util.Calendar.MINUTE, 0);  
 	        cAlEnDaR.set(java.util.Calendar.SECOND, 0);  
