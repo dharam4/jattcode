@@ -302,12 +302,17 @@ public class Library implements Serializable {
 	}
 
 
-	public void DiScHaRgE_LoAn(Loan cUrReNt_LoAn, boolean iS_dAmAgEd) {
-		Member mEmBeR = cUrReNt_LoAn.GeT_MeMbEr();
-		Book bOoK  = cUrReNt_LoAn.GeT_BoOk();
+	//public void DiScHaRgE_LoAn(Loan cUrReNt_LoAn, boolean iS_dAmAgEd) {
+	public void dischargeLoan(Loan currentLoan, boolean isDamaged) {
+		//Member mEmBeR = cUrReNt_LoAn.GeT_MeMbEr();
+		Member member = currentLoan.getMember();
+		//Book bOoK  = cUrReNt_LoAn.GeT_BoOk();
+		Book book  = currentLon.getBook();
 		
-		double oVeR_DuE_FiNe = CaLcUlAtE_OvEr_DuE_FiNe(cUrReNt_LoAn);
-		mEmBeR.AdD_FiNe(oVeR_DuE_FiNe);	
+		//double oVeR_DuE_FiNe = CaLcUlAtE_OvEr_DuE_FiNe(cUrReNt_LoAn);
+		double overDueFine = calculateOverDueFine(currentLoan);
+		//mEmBeR.AdD_FiNe(oVeR_DuE_FiNe);	
+		member.addFine(overDueFine);	
 		
 		mEmBeR.dIsChArGeLoAn(cUrReNt_LoAn);
 		bOoK.ReTuRn(iS_dAmAgEd);
