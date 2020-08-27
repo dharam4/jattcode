@@ -148,13 +148,17 @@ public class Library implements Serializable {
 	}
 
 	
-	private int gEt_NeXt_MeMbEr_Id() {
-		return mEmBeR_Id++;
+	//private int gEt_NeXt_MeMbEr_Id() {
+	private int getNextMemberId() {
+		//return mEmBeR_Id++;
+		return memberId++;
 	}
 
 	
-	private int gEt_NeXt_LoAn_Id() {
-		return lOaN_Id++;
+	//private int gEt_NeXt_LoAn_Id() {
+	private int getNextLoanId() {
+		//return lOaN_Id++;
+		return loanId++;
 	}
 
 	
