@@ -183,9 +183,12 @@ public class Library implements Serializable {
 	}
 
 
-	public Member aDd_MeMbEr(String lastName, String firstName, String email, int phoneNo) {		
-		Member member = new Member(lastName, firstName, email, phoneNo, gEt_NeXt_MeMbEr_Id());
-		MeMbErS.put(member.GeT_ID(), member);		
+	//public Member aDd_MeMbEr(String lastName, String firstName, String email, int phoneNo) {		
+	public Member addMember(String lastName, String firstName, String email, int phoneNo) {		
+		//Member member = new Member(lastName, firstName, email, phoneNo, gEt_NeXt_MeMbEr_Id());
+		Member member = new Member(lastName, firstName, email, phoneNo, getNextMemberId());
+		//MeMbErS.put(member.GeT_ID(), member);		
+		members.put(member.getId(), member);		
 		return member;
 	}
 
