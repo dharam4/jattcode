@@ -119,7 +119,8 @@ public class FixBookUI {
 
 	//public void dIsPlAy(Object object) 
 	public void display(Object object) {
-		OuTpUt(object);
+		//OuTpUt(object);
+		output(object);
 	}
 	
 	
