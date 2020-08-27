@@ -15,14 +15,20 @@ public class Calendar {
 	
 	
 	private Calendar() {
-		cAlEnDaR = java.util.Calendar.getInstance();
+		
+		//cAlEnDaR = java.util.Calendar.getInstance();
+		calendar = java.util.Calendar.getInstance();
 	}
 	
-	public static Calendar gEtInStAnCe() {
-		if (sElF == null) {
-			sElF = new Calendar();
+	//public static Calendar gEtInStAnCe() {
+	public static Calendar getInstance() {   // gEtInStAnCe  to getInstance
+		//if (sElF == null) {  
+		if (self == null) {   // sElF to self
+			//sElF = new Calendar();
+			self = new Calendar();   // sElF to self
 		}
-		return sElF;
+		//return sElF; 
+		return self; 	 // sElF to self
 	}
 	
 	public void incrementDate(int days) {
