@@ -20,18 +20,25 @@ publice class returnBookControl {
 
 	//public rETURN_bOOK_cONTROL() {
 	public returnBookControl(){
-		this.lIbRaRy = Library.GeTiNsTaNcE();
-		sTaTe = cOnTrOl_sTaTe.INITIALISED;
+		//this.lIbRaRy = Library.GeTiNsTaNcE();
+		this.library = library.getInstance();
+		//sTaTe = cOnTrOl_sTaTe.INITIALISED;
+		state = ControlState.INITIALISED;
 	}
 	
 	
-	public void sEt_uI(ReturnBookUI uI) {
-		if (!sTaTe.equals(cOnTrOl_sTaTe.INITIALISED)) 
+	//public void sEt_uI(ReturnBookUI uI) {
+	public void setUi(ReturnBookUi ui) {
+		//if (!sTaTe.equals(cOnTrOl_sTaTe.INITIALISED)) 
+		if (!state.equals(ControlState.INITIALISED))
 			throw new RuntimeException("ReturnBookControl: cannot call setUI except in INITIALISED state");
 		
-		this.Ui = uI;
-		uI.sEt_sTaTe(ReturnBookUI.uI_sTaTe.READY);
-		sTaTe = cOnTrOl_sTaTe.READY;		
+		//this.Ui = uI;
+		this.ui = ui;
+		//uI.sEt_sTaTe(ReturnBookUI.uI_sTaTe.READY);
+		ui.setState(ReturnBookUI.uiState.READY);
+		//sTaTe = cOnTrOl_sTaTe.READY;
+		state = ControlState.READY;	
 	}
 
 
