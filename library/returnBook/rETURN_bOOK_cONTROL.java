@@ -111,10 +111,14 @@ publice class ReturnBookControl {
 		if (!state.equals(controlState.INSPECTING)
 			throw new RuntimeException("ReturnBookControl: cannot call dischargeLoan except in INSPECTING state");
 		
-		lIbRaRy.DiScHaRgE_LoAn(CurrENT_loan, iS_dAmAgEd);
-		CurrENT_loan = null;
-		Ui.sEt_sTaTe(ReturnBookUI.uI_sTaTe.READY);
-		sTaTe = cOnTrOl_sTaTe.READY;				
+		//lIbRaRy.DiScHaRgE_LoAn(CurrENT_loan, iS_dAmAgEd);
+		    libaray.discahrgeLoan(currentLoan, isDamaged);
+		//CurrENT_loan = null;
+	         currentLoan = null;
+		//Ui.sEt_sTaTe(ReturnBookUI.uI_sTaTe.READY);
+	         ui.setState(returnBookUi.uiState.READY);
+		//sTaTe = cOnTrOl_sTaTe.READY;	
+		state = controlState.READY;
 	}
 
 
