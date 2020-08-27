@@ -130,30 +130,38 @@ public class BorrowBookUi {
 				String ans = input("Commit loans? (Y/N): ");		//String AnS = iNpUT("Commit loans? (Y/N): "); changed to String ans = input("Commit loans? (Y/N): ");
 				//if (AnS.toUpperCase().equals("N")) 
 				if (ans.toUpperCase().equals("N")) {		//AnS changed to ans
-					CoNtRoL.CaNcEl();
+					//CoNtRoL.CaNcEl();
+					control.cancel();		//CoNtRoL.CaNcEl(); changed to control.cancel();
 					
 				} else {
-					CoNtRoL.CoMmIt_LoAnS();
-					iNpUT("Press <any key> to complete ");
+					//CoNtRoL.CoMmIt_LoAnS();
+					control.commitLoan();		//CoNtRoL.CoMmIt_LoAnS(); changed to control.commitLoan()
+					//iNpUT("Press <any key> to complete ");
+					input("Press <any key> to complete ");
 				}
 				break;
 				
 				
 			case COMPLETED:
-				OuTpUt("Borrowing Completed");
-				return;
+				//OuTpUt("Borrowing Completed");
+				output("Borrowing Completed");
+
+					return;
 	
 				
 			default:
-				OuTpUt("Unhandled state");
-				throw new RuntimeException("BorrowBookUI : unhandled state :" + StaTe);			
+				//OuTpUt("Unhandled state");
+				output("Unhandled state");
+				throw new RuntimeException("BorrowBookUI : unhandled state :" + state);			
 			}
 		}		
 	}
 
 
-	public void DiSpLaY(Object object) {
-		OuTpUt(object);		
+	//public void DiSpLaY(Object object) 
+	public void display(Object object) {
+		//OuTpUt(object);
+		output(object);
 	}
 
 
