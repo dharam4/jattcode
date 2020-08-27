@@ -41,10 +41,14 @@ public class Calendar {
 		try {
 			//cAlEnDaR.setTime(DaTe);
 			calendar.setTime(date);
-	        cAlEnDaR.set(java.util.Calendar.HOUR_OF_DAY, 0);  
-	        cAlEnDaR.set(java.util.Calendar.MINUTE, 0);  
-	        cAlEnDaR.set(java.util.Calendar.SECOND, 0);  
-	        cAlEnDaR.set(java.util.Calendar.MILLISECOND, 0);
+	        //cAlEnDaR.set(java.util.Calendar.HOUR_OF_DAY, 0);  
+		clendar.set(java.util.Calendar.HOUR_OF_DAY, 0);  
+	        //cAlEnDaR.set(java.util.Calendar.MINUTE, 0);  
+		calendar.set(java.util.Calendar.MINUTE, 0);  
+	        //cAlEnDaR.set(java.util.Calendar.SECOND, 0);
+		calendar.set(java.util.Calendar.SECOND, 0);  
+	        //cAlEnDaR.set(java.util.Calendar.MILLISECOND, 0);
+		calendar.set(java.util.Calendar.MILLISECOND, 0);
 		}
 		catch (Exception e) {
 			throw new RuntimeException(e);
