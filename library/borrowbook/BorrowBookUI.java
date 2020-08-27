@@ -32,15 +32,21 @@ public class BorrowBookUi {
 	}
 
 	
-	private String iNpUT(String PrOmPt) {
-		System.out.print(PrOmPt);
-		return InPuT.nextLine();
+	//private String iNpUT(String PrOmPt) 
+	private String input(String prompt) {
+		//System.out.print(PrOmPt);
+		System.out.print(prompt);		//System.out.print(PrOmPt); changed to System.out.print(prompt);
+		//return InPuT.nextLine();
+		return input.nextLine();		//InPuT changed to input
 	}	
 		
 		
-	private void OuTpUt(Object ObJeCt) {
-		System.out.println(ObJeCt);
-	}
+	//private void OuTpUt(Object ObJeCt) 
+	private void output(Object object) {		//private void OuTpUt(Object ObJeCt) changed to private void output(Object object) 
+		//System.out.println(ObJeCt);
+
+		System.out.println(obJeCt);
+}
 	
 			
 	public void SeT_StAtE(uI_STaTe StAtE) {
