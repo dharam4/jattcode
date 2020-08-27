@@ -1,3 +1,7 @@
+// Author Dharamveer singh
+// Mediator Ankush Kumar
+// reviewer Dipanshu Kumar
+
 package library.entities;
 
 import java.io.FileInputStream;
@@ -17,10 +21,13 @@ import java.util.Map;
 @SuppressWarnings("serial")
 public class Library implements Serializable {
 	
-	private static final String lIbRaRyFiLe = "library.obj";
-	private static final int lOaNlImIt = 2;
+	//private static final String lIbRaRyFiLe = "library.obj";
+	private static final String libraryFile = "library.obj";
+	//private static final int lOaNlImIt = 2;
+	private static final int loanLimit = 2;
 	private static final int loanPeriod = 2;
-	private static final double FiNe_PeR_DaY = 1.0;
+	//private static final double FiNe_PeR_DaY = 1.0;
+	private static final double FinePerDay = 1.0;
 	private static final double maxFinesOwed = 1.0;
 	private static final double damageFee = 2.0;
 	
