@@ -4,45 +4,47 @@ import library.entities.Library;
 import library.entities.Loan;
 
 //public class rETURN_bOOK_cONTROL {
-publice class returnBookControl {
+publice class ReturnBookControl {
 
-	private ReturnBookUI Ui;
+	//private ReturnBookUI Ui;
+	private ReturnBookUi ui;
 	//private enum cOnTrOl_sTaTe { INITIALISED, READY, INSPECTING };
-	private enum controlState { INITIALISED, READY, INSPECTING };
+	private enum ControlState { INITIALISED, READY, INSPECTING };
 	//private cOnTrOl_sTaTe sTaTe;
-	private controlState state;
+	private ControlState state;
 	
 	//private Library lIbRaRy;
-	private library Library;
+	private Library Iibrary;
 	//private Loan CurrENT_loan;
 	private Loan currentLoan;
 	
 
 	//public rETURN_bOOK_cONTROL() {
-	public returnBookControl(){
+	public ReturnBookControl(){
 		//this.lIbRaRy = Library.GeTiNsTaNcE();
-		this.library + library.getIntance(); 
+		this.library = library.getInstance(); 
 		//sTaTe = cOnTrOl_sTaTe.INITIALISED;
 		state = Controlstate.INITITALISED;
 	}
 	
 	
 	//public void sEt_uI(ReturnBookUI uI) {
-	public void setUI(ReturnBookUI UI) {
+	public void setUi(ReturnBookUi ui) {
 		//if (!sTaTe.equals(cOnTrOl_sTaTe.INITIALISED)) 
-		if (!state.equals(controlState.INITIALISED)) 
+		if (!state.equals(ControlState.INITIALISED)) 
 			//throw new RuntimeException("ReturnBookControl: cannot call setUI except in INITIALISED state");
 			throw new runtimeException("ReturnBookControl: cannot call setUI expect in INITIALISED state");
-		this.Ui = uI;
+		//this.Ui = uI;
+		this.ui = ui;
 		//uI.sEt_sTaTe(ReturnBookUI.uI_sTaTe.READY);
-		UI.setState(ReturnBookUI.uiState.READY);
+		ui.setState(ReturnBookUi.uiState.READY);
 		//sTaTe = cOnTrOl_sTaTe.READY;
 		state = ControlState.READY;
 	}
 
 
 	//public void bOoK_sCaNnEd(int bOoK_iD) {
-	public void booksScanned(int bookId) {
+	public void bookScanned(int bookId) {
 		//if (!sTaTe.equals(cOnTrOl_sTaTe.READY))
 	         if (!state.equals(ControlState.READY))
 			throw new RuntimeException("ReturnBookControl: cannot call bookScanned except in READY state");
@@ -63,7 +65,7 @@ publice class returnBookControl {
 			return;
 		}		
 		//CurrENT_loan = lIbRaRy.GeT_LoAn_By_BoOkId(bOoK_iD);	
-		currentLoan = library.getLoanbuBookId(boonId);
+		currentLoan = library.getLoanbyBookId(bookId);
 		//double Over_Due_Fine = 0.0;
 		double overdueFine = 0.0;
 		//if (CurrENT_loan.Is_OvEr_DuE()) 
@@ -84,12 +86,15 @@ publice class returnBookControl {
 			//Ui.DiSpLaY(String.format("\nOverdue fine : $%.2f", Over_Due_Fine));
 		         ui.display(String.format("\nOverdue fine : $%.2f", overdueFine));
 		
-		Ui.sEt_sTaTe(ReturnBookUI.uI_sTaTe.INSPECTING);
-		sTaTe = cOnTrOl_sTaTe.INSPECTING;		
+		//Ui.sEt_sTaTe(ReturnBookUI.uI_sTaTe.INSPECTING);
+		ui.setState(returnBookUi.uiState.INSPECTING);
+		//sTaTe = cOnTrOl_sTaTe.INSPECTING;
+		state = controlState.INSPECTING;
 	}
 
 
-	public void sCaNnInG_cOmPlEtE() {
+	//public void sCaNnInG_cOmPlEtE() {
+	
 		if (!sTaTe.equals(cOnTrOl_sTaTe.READY)) 
 			throw new RuntimeException("ReturnBookControl: cannot call scanningComplete except in READY state");
 			
