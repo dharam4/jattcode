@@ -74,14 +74,20 @@ publice class returnBookControl {
 		
 		//Ui.DiSpLaY("Inspecting");
 		ui.display("Inspecting");
-		Ui.DiSpLaY(cUrReNt_bOoK.toString());
-		Ui.DiSpLaY(CurrENT_loan.toString());
+		//Ui.DiSpLaY(cUrReNt_bOoK.toString());
+		ui.dispaly(currentBook.toString());
+		//Ui.DiSpLaY(CurrENT_loan.toString());
+		ui.display(currentLoan.toString());
 		
-		if (CurrENT_loan.Is_OvEr_DuE()) 
-			Ui.DiSpLaY(String.format("\nOverdue fine : $%.2f", Over_Due_Fine));
+		//if (CurrENT_loan.Is_OvEr_DuE())
+		if (currentLoan.isOverdue())
+			//Ui.DiSpLaY(String.format("\nOverdue fine : $%.2f", Over_Due_Fine));
+			ui.dispaly(String.format("\nOverdue fine : $%.2f", overdueFine));
 		
-		Ui.sEt_sTaTe(ReturnBookUI.uI_sTaTe.INSPECTING);
-		sTaTe = cOnTrOl_sTaTe.INSPECTING;		
+		//Ui.sEt_sTaTe(ReturnBookUI.uI_sTaTe.INSPECTING);
+		ui.setState(ReturnBookUi.uiState.INSPECTING0;
+		//sTaTe = cOnTrOl_sTaTe.INSPECTING;
+	         state = ControlState.INSPECTING;
 	}
 
 
