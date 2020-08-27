@@ -111,8 +111,10 @@ public class Loan implements Serializable {
 	}
 
 
-	public void DiScHaRgE() {
-		StAtE = lOaN_sTaTe.DISCHARGED;		
+	//public void DiScHaRgE() {
+	public void discharge() {
+		//StAtE = lOaN_sTaTe.DISCHARGED;		
+		state = loanState.DISCHARGED;		
 	}
 
 }
