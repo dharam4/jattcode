@@ -97,8 +97,10 @@ public class Loan implements Serializable {
 	}
 
 
-	public Member GeT_MeMbEr() {
-		return MeMbEr;
+	//public Member GeT_MeMbEr() {
+	public Member getMember() {
+		//return MeMbEr;
+		return member;
 	}
 
 
