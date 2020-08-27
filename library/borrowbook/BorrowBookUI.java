@@ -25,8 +25,10 @@ public class BorrowBookUi {
 		this.control = control;			//CoNtRoL changed to control
 		//InPuT = new Scanner(System.in);
 		input = new Scanner(System.in);		//InPuT changed to input
-		StaTe = uI_STaTe.INITIALISED;
-		control.SeT_Ui(this);
+		//StaTe = uI_STaTe.INITIALISED;
+		state = uiState.INITIALISED;
+		//control.SeT_Ui(this);
+		control.setUi(this);			//control.SeT_Ui(this); changed to control.setUi(this);
 	}
 
 	
