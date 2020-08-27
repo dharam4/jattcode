@@ -54,13 +54,19 @@ public class Calendar {
 			throw new RuntimeException(e);
 		}	
 	}
-	public synchronized Date gEt_DaTe() {
+	//public synchronized Date gEt_DaTe() {
+	public synchronized Date getDate() {   // gEt_DaTe to getDate -  author
 		try {
-	        cAlEnDaR.set(java.util.Calendar.HOUR_OF_DAY, 0);  
-	        cAlEnDaR.set(java.util.Calendar.MINUTE, 0);  
-	        cAlEnDaR.set(java.util.Calendar.SECOND, 0);  
-	        cAlEnDaR.set(java.util.Calendar.MILLISECOND, 0);
-			return cAlEnDaR.getTime();
+	       // cAlEnDaR.set(java.util.Calendar.HOUR_OF_DAY, 0);
+		calendar.set(java.util.Calendar.HOUR_OF_DAY, 0);  
+	        //cAlEnDaR.set(java.util.Calendar.MINUTE, 0);
+		calendar.set(java.util.Calendar.MINUTE, 0);  
+	        //cAlEnDaR.set(java.util.Calendar.SECOND, 0);
+		calendar.set(java.util.Calendar.SECOND, 0);  
+	        //cAlEnDaR.set(java.util.Calendar.MILLISECOND, 0);
+		calendar.set(java.util.Calendar.MILLISECOND, 0);
+			//return cAlEnDaR.getTime();
+			return calendar.getTime();
 		}
 		catch (Exception e) {
 			throw new RuntimeException(e);
