@@ -325,14 +325,19 @@ public class Library implements Serializable {
 			//DaMaGeD_BoOkS.put(bOoK.gEtId(), bOoK);
 			damagedBooks.put(booK.getId(), booK);
 		}
-		cUrReNt_LoAn.DiScHaRgE();
-		CuRrEnT_LoAnS.remove(bOoK.gEtId());
+		//cUrReNt_LoAn.DiScHaRgE();
+		currentLoan.discharge();
+		//CuRrEnT_LoAnS.remove(bOoK.gEtId());
+		currentLoans.remove(booK.getId());
 	}
 
 
-	public void cHeCk_CuRrEnT_LoAnS() {
-		for (Loan lOaN : CuRrEnT_LoAnS.values()) 
-			lOaN.cHeCk_OvEr_DuE();
+	//public void cHeCk_CuRrEnT_LoAnS() {
+	public void checkCurrentLoans() {
+		//for (Loan lOaN : CuRrEnT_LoAnS.values()) 
+		for (Loan laon : currentLoans.values()) 
+			//lOaN.cHeCk_OvEr_DuE();
+			loan.checkOverDue();
 				
 	}
 
