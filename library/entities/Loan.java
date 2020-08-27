@@ -79,10 +79,14 @@ public class Loan implements Serializable {
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
 		StringBuilder sb = new StringBuilder();
-		sb.append("Loan:  ").append(LoAn_Id).append("\n")
-		  .append("  Borrower ").append(MeMbEr.GeT_ID()).append(" : ")
-		  .append(MeMbEr.GeT_LaSt_NaMe()).append(", ").append(MeMbEr.GeT_FiRsT_NaMe()).append("\n")
-		  .append("  Book ").append(BoOk.gEtId()).append(" : " )
+		//sb.append("Loan:  ").append(LoAn_Id).append("\n")
+		sb.append("Loan:  ").append(loanId).append("\n")
+ //.append("  Borrower ").append(MeMbEr.GeT_ID()).append(" : ")
+		   .append("  Borrower ").append(member.getId()).append(" : ")
+//.append(MeMbEr.GeT_LaSt_NaMe()).append(", ").append(MeMbEr.GeT_FiRsT_NaMe()).append("\n")
+        	  .append(member.getLastName()).append(", ").append(member.getFirstName()).append("\n")
+		  //.append("  Book ").append(BoOk.gEtId()).append(" : " )
+		  .append("  Book ").append(book.getId()).append(" : " )
 		  .append(BoOk.gEtTiTlE()).append("\n")
 		  .append("  DueDate: ").append(sdf.format(DaTe)).append("\n")
 		  .append("  State: ").append(StAtE);		
