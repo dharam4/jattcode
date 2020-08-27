@@ -79,16 +79,23 @@ public class Calendar {
 		Date now = getDate();
 		//cAlEnDaR.add(java.util.Calendar.DATE, loanPeriod);
 		calendar.add(java.util.Calendar.DATE, loanPeriod);
-		Date dUeDaTe = cAlEnDaR.getTime();
-		cAlEnDaR.setTime(nOw);
-		return dUeDaTe;
+		//Date dUeDaTe = cAlEnDaR.getTime();
+		Date dueDate = calendar.getTime();
+		//cAlEnDaR.setTime(nOw);
+		calendar.setTime(now);
+		//return dUeDaTe;
+		return dueDate;
 	}
 	
-	public synchronized long GeT_DaYs_DiFfErEnCe(Date targetDate) {
+	//public synchronized long GeT_DaYs_DiFfErEnCe(Date targetDate) {
+	public synchronized long getDaysDifference(Date targetDate) {
 		
-		long Diff_Millis = gEt_DaTe().getTime() - targetDate.getTime();
-	    long Diff_Days = TimeUnit.DAYS.convert(Diff_Millis, TimeUnit.MILLISECONDS);
-	    return Diff_Days;
+		//long Diff_Millis = gEt_DaTe().getTime() - targetDate.getTime();
+		long diffMillis = getDate().getTime() - targetDate.getTime();
+	    //long Diff_Days = TimeUnit.DAYS.convert(Diff_Millis, TimeUnit.MILLISECONDS);
+		long diffDays = TimeUnit.DAYS.convert(diffMillis, TimeUnit.MILLISECONDS);
+	    //return Diff_Days;
+		return diffDays;
 	}
 
 }
