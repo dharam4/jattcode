@@ -106,23 +106,30 @@ public class BorrowBookUi {
 			case SCANNING:
 				//String BoOk_StRiNg_InPuT = iNpUT("Scan Book (<enter> completes): ");
 				String bookStringInput = input("Scan Book (<enter> completes): ");
-				if (BoOk_StRiNg_InPuT.length() == 0) {
-					CoNtRoL.CoMpLeTe();
+				//if (BoOk_StRiNg_InPuT.length() == 0) 
+				if (bookStringInput.length() == 0) {
+					//CoNtRoL.CoMpLeTe();
+					control.complete();
 					break;
 				}
 				try {
-					int BiD = Integer.valueOf(BoOk_StRiNg_InPuT).intValue();
-					CoNtRoL.ScAnNeD(BiD);
+					//int BiD = Integer.valueOf(BoOk_StRiNg_InPuT).intValue();
+					int bid = Integer.valueOf(bookStringInput).intValue();
+					//CoNtRoL.ScAnNeD(BiD);
+					control.scanned(bid);	 		//CoNtRoL.ScAnNeD(BiD); changed to control.scanned(bid);
 					
 				} catch (NumberFormatException e) {
-					OuTpUt("Invalid Book Id");
+					//OuTpUt("Invalid Book Id");
+					output("Invalid Book Id");		//OuTpUt changed to output
 				} 
 				break;
 					
 				
 			case FINALISING:
-				String AnS = iNpUT("Commit loans? (Y/N): ");
-				if (AnS.toUpperCase().equals("N")) {
+				//String AnS = iNpUT("Commit loans? (Y/N): ");
+				String ans = input("Commit loans? (Y/N): ");		//String AnS = iNpUT("Commit loans? (Y/N): "); changed to String ans = input("Commit loans? (Y/N): ");
+				//if (AnS.toUpperCase().equals("N")) 
+				if (ans.toUpperCase().equals("N")) {		//AnS changed to ans
 					CoNtRoL.CaNcEl();
 					
 				} else {
