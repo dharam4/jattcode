@@ -31,10 +31,14 @@ public class Loan implements Serializable {
 	public Loan(int loanId, Book booK, Member member, dateDueDate) {
 		//this.LoAn_Id = loanId;
 		this.loanId = loanId;
-		this.BoOk = bOoK;
-		this.MeMbEr = mEmBeR;
-		this.DaTe = DuE_dAtE;
-		this.StAtE = lOaN_sTaTe.CURRENT;
+		//this.BoOk = bOoK;
+		this.book = booK;
+		//this.MeMbEr = mEmBeR;
+		this.member = member;
+		//this.DaTe = DuE_dAtE;
+		this.date = dueDate;
+		//this.StAtE = lOaN_sTaTe.CURRENT;
+		this.state = loanState.CURRENT;
 	}
 
 	
