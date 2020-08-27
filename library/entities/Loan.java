@@ -47,7 +47,7 @@ public class Loan implements Serializable {
 		//if (StAtE == lOaN_sTaTe.CURRENT &&
 		if (state == loanState.CURRENT &&
 			//Calendar.gEtInStAnCe().gEt_DaTe().after(DaTe)) 
-		    Calendar.getInstance().getDate().after(Date)) 
+		    Calendar.getInstance().getDate().after(date)) 
 			//this.StAtE = lOaN_sTaTe.OVER_DUE;		
 			this.state = loanState.OVER_DUE;			
 		
@@ -68,8 +68,10 @@ public class Loan implements Serializable {
 	}
 
 
-	public Date GeT_DuE_DaTe() {
-		return DaTe;
+	//public Date GeT_DuE_DaTe() {
+	public Date getDueDate () {
+		//return DaTe;
+		return date;
 	}
 	
 	
