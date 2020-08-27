@@ -314,11 +314,16 @@ public class Library implements Serializable {
 		//mEmBeR.AdD_FiNe(oVeR_DuE_FiNe);	
 		member.addFine(overDueFine);	
 		
-		mEmBeR.dIsChArGeLoAn(cUrReNt_LoAn);
-		bOoK.ReTuRn(iS_dAmAgEd);
-		if (iS_dAmAgEd) {
-			mEmBeR.AdD_FiNe(damageFee);
-			DaMaGeD_BoOkS.put(bOoK.gEtId(), bOoK);
+		//mEmBeR.dIsChArGeLoAn(cUrReNt_LoAn);
+		member.dischargeLoan(currentLoan);
+		//bOoK.ReTuRn(iS_dAmAgEd);
+		book.return(isDamaged);
+		//if (iS_dAmAgEd) {
+		if (isDamaged) {
+			//mEmBeR.AdD_FiNe(damageFee);
+			member.addFine(damageFee);
+			//DaMaGeD_BoOkS.put(bOoK.gEtId(), bOoK);
+			damagedBooks.put(booK.getId(), booK);
 		}
 		cUrReNt_LoAn.DiScHaRgE();
 		CuRrEnT_LoAnS.remove(bOoK.gEtId());
