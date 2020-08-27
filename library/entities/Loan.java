@@ -87,9 +87,12 @@ public class Loan implements Serializable {
         	  .append(member.getLastName()).append(", ").append(member.getFirstName()).append("\n")
 		  //.append("  Book ").append(BoOk.gEtId()).append(" : " )
 		  .append("  Book ").append(book.getId()).append(" : " )
-		  .append(BoOk.gEtTiTlE()).append("\n")
-		  .append("  DueDate: ").append(sdf.format(DaTe)).append("\n")
-		  .append("  State: ").append(StAtE);		
+		  //.append(BoOk.gEtTiTlE()).append("\n")
+		  .append(book.getTitle()).append("\n")
+		  //.append("  DueDate: ").append(sdf.format(DaTe)).append("\n")
+		  .append("  DueDate: ").append(sdf.format(date)).append("\n")
+		  //.append("  State: ").append(StAtE);	
+		  .append("  State: ").append(state);		
 		return sb.toString();
 	}
 
