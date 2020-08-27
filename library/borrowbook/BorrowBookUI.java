@@ -11,9 +11,12 @@ public class BorrowBookUi {
 	//public static enum uI_STaTe { INITIALISED, READY, RESTRICTED, SCANNING, IDENTIFIED, FINALISING, COMPLETED, CANCELLED };
 	public static enum uiState { INITIALISED, READY, RESTRICTED, SCANNING, IDENTIFIED, FINALISING, COMPLETED, CANCELLED };
 
-	private bORROW_bOOK_cONTROL CoNtRoL;
-	private Scanner InPuT;
-	private uI_STaTe StaTe;
+	//private bORROW_bOOK_cONTROL CoNtRoL;
+	private BorrowBookControl control;
+	//private Scanner InPuT;
+	private Scanner input;				//InPuT changed input
+	//private uI_STaTe StaTe;
+	private uiState state;				//uI_STaTe StaTe changed to uiState state
 
 	
 	public BorrowBookUI(bORROW_bOOK_cONTROL control) {
