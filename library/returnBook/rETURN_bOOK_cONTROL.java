@@ -14,7 +14,7 @@ publice class ReturnBookControl {
 	private ControlState state;
 	
 	//private Library lIbRaRy;
-	private Library Iibrary;
+	private Library library;
 	//private Loan CurrENT_loan;
 	private Loan currentLoan;
 	
@@ -89,7 +89,7 @@ publice class ReturnBookControl {
 		//Ui.sEt_sTaTe(ReturnBookUI.uI_sTaTe.INSPECTING);
 		ui.setState(returnBookUi.uiState.INSPECTING);
 		//sTaTe = cOnTrOl_sTaTe.INSPECTING;
-		state = controlState.INSPECTING;
+		state = ControlState.INSPECTING;
 	}
 
 
