@@ -69,30 +69,40 @@ public class Book implements Serializable {
 	}
 
 	
-	public boolean iS_On_LoAn() {
-		return StAtE == sTaTe.ON_LOAN; 
+	//public boolean iS_On_LoAn() {
+		//return StAtE == sTaTe.ON_LOAN; 
+		public boolean isOnLoan() {             // iS_On_LoAn to isOnLoan -author
+		return state == State.ON_LOAN;      // StAtE to state and sTaTe to State
 	}
 
 	
-	public boolean iS_DaMaGeD() {
-		return StAtE == sTaTe.DAMAGED;
+	//public boolean iS_DaMaGeD() {
+		//return StAtE == sTaTe.DAMAGED;
+		public boolean isDamaged() {   // iS_DaMaGeD to isDamaged
+		return state == State.DAMAGED; //StAtE to state and sTaTe to State
 	}
 
 	
-	public void BoRrOw() {
-		if (StAtE.equals(sTaTe.AVAILABLE)) 
-			StAtE = sTaTe.ON_LOAN;
+	//public void BoRrOw() {
+		//if (StAtE.equals(sTaTe.AVAILABLE)) 
+			//StAtE = sTaTe.ON_LOAN;
+		
+		//else 
+			//throw new RuntimeException(String.format("Book: cannot borrow while book is in state: %s", StAtE));
+		
+		public void borrow() {  // BoRrOw to borrow -author
+		if (state.equals(State.AVAILABLE)) //StAtE to state and sTaTe to State
+			state = State.ON_LOAN; //StAtE to state and sTaTe to State
 		
 		else 
-			throw new RuntimeException(String.format("Book: cannot borrow while book is in state: %s", StAtE));
-		
+			throw new RuntimeException(String.format("Book: cannot borrow while book is in state: %s", state)); //StAtE to state 
 		
 	}
 
 
-	public void ReTuRn(boolean DaMaGeD) {
+	/*public void ReTuRn(boolean DaMaGeD) {
 		if (StAtE.equals(sTaTe.ON_LOAN)) 
-			if (DaMaGeD) 
+				if (DaMaGeD) 
 				StAtE = sTaTe.DAMAGED;
 			
 			else 
@@ -100,17 +110,38 @@ public class Book implements Serializable {
 			
 		
 		else 
-			throw new RuntimeException(String.format("Book: cannot Return while book is in state: %s", StAtE));
+			throw new RuntimeException(String.format("Book: cannot Return while book is in state: %s", StAtE));*/
+		
+	public void return(boolean damaged) {  // ReTuRn  to return,  DaMaGeD to damaged
+		if (state.equals(State.ON_LOAN)) 
+			if (damaged)            //DaMaGeD to damaged
 				
+				state= State.DAMAGED;			//StAtE to state and sTaTe to State
+			
+			else 
+				state = State.AVAILABLE;		//StAtE to state and sTaTe to State
+			
+		
+		else 
+			throw new RuntimeException(String.format("Book: cannot Return while book is in state: %s", state)); //StAtE to state 
+			
 	}
 
 	
-	public void RePaIr() {
+	/*public void RePaIr() {
 		if (StAtE.equals(sTaTe.DAMAGED)) 
 			StAtE = sTaTe.AVAILABLE;
 		
 		else 
 			throw new RuntimeException(String.format("Book: cannot repair while book is in state: %s", StAtE));
+		*/
+	
+	public void repair() {    //RePaIr to repair
+		if (state.equals(State.DAMAGED)) //StAtE to state and sTaTe to State
+			state = State.AVAILABLE;		//StAtE to state and sTaTe to State
+		
+		else 
+			throw new RuntimeException(String.format("Book: cannot repair while book is in state: %s", state));  	//StAtE to state 
 		
 	}
 
