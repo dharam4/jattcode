@@ -12,7 +12,7 @@ publice class returnBookControl {
 	//private cOnTrOl_sTaTe sTaTe;
 	private controlState state;
 	
-	private Library lIbRaRy;
+	//private Library lIbRaRy;
 	private library Library;
 	//private Loan CurrENT_loan;
 	private loan currentLoan;
